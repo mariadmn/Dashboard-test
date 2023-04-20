@@ -60,6 +60,17 @@ export const tokens = (mode) => ({
           800: "#2a2d64",
           900: "#151632",
         },
+        orangeAccent: {
+          100: "#fae6d7",
+          200: "#f5ccaf",
+          300: "#f1b387",
+          400: "#ec995f",
+          500: "#e78037",
+          600: "#b9662c",
+          700: "#8b4d21",
+          800: "#5c3316",
+          900: "#2e1a0b"
+        },
       }
     : {
         grey: {
@@ -117,7 +128,19 @@ export const tokens = (mode) => ({
           800: "#c3c6fd",
           900: "#e1e2fe",
         },
+        orangeAccent: {
+          100: "#2e1a0b",
+          200: "#5c3316",
+          300: "#8b4d21",
+          400: "#b9662c",
+          500: "#e78037",
+          600: "#ec995f",
+          700: "#f1b387",
+          800: "#f5ccaf",
+          900: "#fae6d7",
+        },
       }),
+      
 });
 
 // mui theme settings
@@ -199,7 +222,7 @@ export const ColorModeContext = createContext({
 });
 
 export const useMode = () => {
-    const [mode, setMode] = useState('light');
+    const [mode, setMode] = useState('dark');
     const colorMode = useMemo(
         () => ({
           toggleColorMode: () =>

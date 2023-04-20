@@ -1,0 +1,119 @@
+import { Box } from '@mui/material';
+import { useTheme } from "@mui/material/styles";
+import { tokens } from "../themes";
+import Header from "./header";
+import {categoryChartData} from "../data/chartData";
+import { PieChart, Pie, Cell, Sector } from 'recharts';
+import React, { useState, useCallback } from 'react';
+
+const renderActiveShape = (props) => {
+    const RADIAN = Math.PI / 180;
+    const {
+      cx,
+      cy,
+      midAngle,
+      innerRadius,
+      outerRadius,
+      startAngle,
+      endAngle,
+      fill,
+      payload,
+      value
+    } = props;
+    const sin = Math.sin(-RADIAN * midAngle);
+    const cos = Math.cos(-RADIAN * midAngle);
+    const sx = cx + (outerRadius + 10) * cos;
+    const sy = cy + (outerRadius + 10) * sin;
+    const mx = cx + (outerRadius + 30) * cos;
+    const my = cy + (outerRadius + 30) * sin;
+    const ex = mx + (cos >= 0 ? 1 : -1) * 22;
+    const ey = my;
+    const textAnchor = cos >= 0 ? "start" : "end";
+  
+    return (
+      <g>
+        <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+          {payload.categoria}
+        </text>
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={innerRadius}
+          outerRadius={outerRadius}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={fill}
+        />
+        <Sector
+          cx={cx}
+          cy={cy}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          innerRadius={outerRadius + 6}
+          outerRadius={outerRadius + 10}
+          fill={fill}
+        />
+        <path
+          d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`}
+          stroke={fill}
+          fill="none"
+        />
+        <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
+        <text
+          x={ex + (cos >= 0 ? 1 : -1) * 12}
+          y={ey}
+          textAnchor={textAnchor}
+          fill={fill}
+        >{`Total: ${value}`}</text>
+        <text
+          x={ex + (cos >= 0 ? 1 : -1) * 12}
+          y={ey}
+          dy={18}
+          textAnchor={textAnchor}
+          fill={fill}
+        >
+          {`(${payload.porcentagem}%)`}
+        </text>
+      </g>
+    );
+  };
+
+const CategoryChart = () =>{
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+    const chartColors = [colors.blueAccent[400], colors.blueAccent[500], colors.blueAccent[600], colors.blueAccent[700], colors.blueAccent[800]];
+    const [activeIndex, setActiveIndex] = useState(0);
+    const onPieEnter = useCallback(
+        (_, index) => {
+        setActiveIndex(index);
+        },
+        [setActiveIndex]
+    );
+
+    return (
+        <Box m="5px" border={1} p={1} color={colors.grey[600]}>
+            <Header title="Categoria de Publicação" 
+             subtitle="Gráfico das categorias dos artigos" />
+            <PieChart width={600} height={400}>
+                <Pie
+                    activeIndex={activeIndex}
+                    activeShape={renderActiveShape}
+                    dataKey="total"
+                    data={categoryChartData}
+                    cx={300}
+                    cy={200}
+                    innerRadius={120}
+                    outerRadius={180}
+                    onMouseEnter={onPieEnter}
+                >
+                    {categoryChartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={chartColors[index % chartColors.length]} />
+                    ))}
+                </Pie>
+                <Pie dataKey="total"/>
+        </PieChart>
+    </Box>
+    );
+};
+
+export default CategoryChart;

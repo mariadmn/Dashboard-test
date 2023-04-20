@@ -18,29 +18,30 @@ import { useTheme } from "@mui/material/styles";
 export default function YearChart() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
   return (
     <Box m="5px" border={1} p={1} color={colors.grey[600]}> 
       <Header title="Ano de Publicação" 
-      subtitle="Tabela com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />
+      subtitle="Gráfico com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />
       <BarChart
-      width={600}
-      height={500}
-      data={yearChartData}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="ano" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Bar dataKey="totalPublicacoes" fill="#8884d8" />
-      <Bar dataKey="totalPublicacoesTematica" fill="#82ca9d" />
-    </BarChart>
+        width={600}
+        height={500}
+        data={yearChartData}
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="ano" color={colors.redAccent[900]}/>
+        <YAxis color={colors.primary[100]}/>
+        <Tooltip />
+        <Legend color={colors.primary[100]}/>
+        <Bar dataKey="totalPublicacoes" fill={colors.greenAccent[500]} />
+        <Bar dataKey="totalPublicacoesTematica" fill={colors.blueAccent[500]} />
+      </BarChart>
     </Box>
   );
 }
