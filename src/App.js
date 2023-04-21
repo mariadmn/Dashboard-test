@@ -19,21 +19,15 @@ function App() {
             <Box display="flex" justifyContent="space-between" flexDirection="column" >
               <Topbar />
               {/* Graficos */}
-              <Box display="flex" justifyContent="space-between" flexDirection="colunm" height="100%" width="100%" p={1}>
-                {/* Primeira Linha */}
-                <Box display="flex" justifyContent="space-between" flexDirection="row">
-                  <YearChart />
-                  <YearTable />
-                </Box>
-                {/* Segunda Linha */}
-                <Box display="flex" justifyContent="space-between" flexDirection="row">
-                  <CategoryChart />
-                  <EventChart />
-                </Box>
-                {/* Terceira Linha */}
-                <Box display="flex" justifyContent="space-between" flexDirection="row">
-
-                </Box>
+              {/* Primeira Linha */}
+              <Box display="flex" justifyContent="space-between" flexDirection="row">
+                <YearChart />
+                <YearTable />
+              </Box>
+              {/* Segunda Linha */}
+              <Box display="flex" justifyContent="space-between" flexDirection="row">
+                <CategoryChart />
+                <EventChart />
               </Box>
             </Box>
           </main>
