@@ -5,6 +5,7 @@ import Header from "./header";
 import {categoryChartData} from "../data/chartData";
 import { PieChart, Pie, Cell, Sector } from 'recharts';
 import React, { useState, useCallback } from 'react';
+import { Typography } from '@mui/material';
 
 const renderActiveShape = (props) => {
     const RADIAN = Math.PI / 180;
@@ -102,8 +103,8 @@ const CategoryChart = () =>{
                     data={categoryChartData}
                     cx={300}
                     cy={200}
-                    innerRadius={120}
-                    outerRadius={180}
+                    innerRadius={110}
+                    outerRadius={170}
                     onMouseEnter={onPieEnter}
                 >
                     {categoryChartData.map((entry, index) => (
@@ -112,6 +113,9 @@ const CategoryChart = () =>{
                 </Pie>
                 <Pie dataKey="total"/>
         </PieChart>
+        <Typography variant="h5" color={colors.primary[100]} justifySelf="center" marginTop={10}>
+            Total de artigos: {categoryChartData.reduce((total, item) => total + item.total, 0)}
+        </Typography>
     </Box>
     );
 };

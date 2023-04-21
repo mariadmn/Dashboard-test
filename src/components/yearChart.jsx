@@ -30,7 +30,7 @@ export default function YearChart() {
         margin={{
           top: 5,
           right: 30,
-          left: 20,
+          left: 10,
           bottom: 5
         }}
       >
@@ -39,8 +39,8 @@ export default function YearChart() {
         <YAxis color={colors.primary[100]}/>
         <Tooltip />
         <Legend color={colors.primary[100]}/>
-        <Bar dataKey="totalPublicacoes" fill={colors.greenAccent[500]} />
-        <Bar dataKey="totalPublicacoesTematica" fill={colors.blueAccent[500]} />
+        <Bar name="Total de publicações" dataKey="totalPublicacoes" fill={colors.greenAccent[500]} />
+        <Bar name="Total de publicações na temática" dataKey="totalPublicacoesTematica" fill={colors.blueAccent[500]} />
       </BarChart>
     </Box>
   );

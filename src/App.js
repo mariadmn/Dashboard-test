@@ -29,6 +29,10 @@ function App() {
                 <CategoryChart />
                 <EventChart />
               </Box>
+              {/* Terceira Linha */}
+              <Box display="flex" justifyContent="space-between" flexDirection="row">
+
+              </Box>
             </Box>
           </main>
         </div>

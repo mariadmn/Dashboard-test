@@ -12,7 +12,7 @@ const YearTable = () =>{
     <Box m="5px" border={1} p={1} color={colors.grey[600]}>
       <Header title="Ano de Publicação" 
       subtitle="Tabela com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />
-      <Box display="flex" height="500px" width="800px"
+      <Box display="flex" height="500px" width="900px"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",
