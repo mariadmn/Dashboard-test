@@ -5,9 +5,23 @@ import YearTable from "./components/yearTable";
 import YearChart from "./components/yearChart";
 import CategoryChart from "./components/categoryChart";
 import EventChart from "./components/eventChart";
+import EventChart2 from "./components/eventChart2";
+import ContextTable from "./components/contextTable";
+import { useState } from "react";
+import CategoryTable from "./components/categoryTable";
 
 function App() {
   const [theme, colorMode] = useMode();
+  const [isYearChart, setmyIsYearChart] = useState(true);
+  const [isCategoryChart, setmyIsCategoryChart] = useState(true);
+
+  function toggleYearChart() {
+    setmyIsYearChart(!isYearChart)
+  }
+  function toggleCategoryChart() {
+    setmyIsCategoryChart(!isCategoryChart)
+  }
+
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -21,17 +35,21 @@ function App() {
               {/* Graficos */}
               {/* Primeira Linha */}
               <Box display="flex" justifyContent="space-between" flexDirection="row">
-                <YearChart />
-                <YearTable />
+                {isYearChart ? <YearChart toggleBool={toggleYearChart} /> : <YearTable  toggleBool={toggleYearChart} />} 
+                {isCategoryChart ? <CategoryChart  toggleBool={toggleCategoryChart} /> : <CategoryTable  toggleBool={toggleCategoryChart} />} 
               </Box>
               {/* Segunda Linha */}
               <Box display="flex" justifyContent="space-between" flexDirection="row">
-                <CategoryChart />
-                <EventChart />
+                
               </Box>
               {/* Terceira Linha */}
               <Box display="flex" justifyContent="space-between" flexDirection="row">
-
+                <EventChart2 />
+                <EventChart />
+              </Box>
+              {/* Quarta Linha */}
+              <Box display="flex" justifyContent="space-between" flexDirection="row">
+                <ContextTable />
               </Box>
             </Box>
           </main>

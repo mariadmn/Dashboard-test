@@ -1,22 +1,21 @@
-import * as React from "react";
-import { yearChartData, columnsYearChart } from "../data/chartData";
+
+import { contextData, contextColumns } from "../data/chartData";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box } from '@mui/material';
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "../themes";
 import Header from "./header";
 import IconButton from "@mui/material/IconButton";
-import BarChartIcon from '@mui/icons-material/BarChart';
+import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 
-export default function YearTable(props) {
+export default function ContextTable(props) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
   return (
     <Box m="5px" border={1} p={1} color={colors.grey[600]}>
-      <Header title="Ano de Publicação" 
-      subtitle="Tabela com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />
-      <IconButton onClick={props.toggleBool} sx={{ color: colors.primary[100] }}><BarChartIcon/><h5> Ver gráfico</h5></IconButton>
+      <Header title="Propósito do Artigo" 
+      subtitle="Tabela a quantidade de artigos divididos pelos seus porpósitos" />
+      <IconButton onClick={props.toggleBool} sx={{ color: colors.primary[100] }}>Gráfico</IconButton>
       <Box display="flex" height="500px" width="900px"
         sx={{
           "& .MuiDataGrid-root": {
@@ -47,11 +46,11 @@ export default function YearTable(props) {
           },
         }}>
         <DataGrid 
-          rows={yearChartData}
-          columns={columnsYearChart}
+          rows={contextData}
+          columns={contextColumns}
           components={{ Toolbar: GridToolbar }}
         />
       </Box>
     </Box>
   );
-}
+};

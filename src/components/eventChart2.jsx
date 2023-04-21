@@ -8,29 +8,32 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-import { eventChartData } from "../data/chartData";
+import { totalEventos } from "../data/chartData";
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "../themes";
 import Header from "./header";
 import { Box } from "@mui/material";
+import { CSVLink } from "react-csv";
 import TableViewIcon from '@mui/icons-material/TableView';
 
-export default function EventChart() {
+
+export default function EventChart2() {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     // const chartColors = [colors.blueAccent[400], colors.blueAccent[500], colors.blueAccent[600], colors.blueAccent[700], colors.blueAccent[800]];
     return (
         <Box m="5px" border={1} p={1} color={colors.grey[600]}>
-            <Header title="Artigos por Evento" 
-             subtitle="Gráfico dos artigos publicados em cada evento nos anos de 2019, 2020, 2021 e 2022" />
+            <Header title="Eventos realizados por Ano" 
+             subtitle="Gráfico dos eventos realizados entre 2010 e 2022" />
+             {/* <CSVLink data={totalEventos}>Exportar para CSV</CSVLink> */}
             <BarChart
-                width={500}
-                height={500}
-                data={eventChartData}
+                width={1000}
+                height={600}
+                data={totalEventos}
                 margin={{
                     top: 20,
                     right: 30,
-                    left: 20,
+                    left: 5,
                     bottom: 5
                 }}
             >

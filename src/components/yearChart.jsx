@@ -13,9 +13,12 @@ import { Box } from "@mui/material";
 import Header from "./header";
 import { tokens } from "../themes";
 import { useTheme } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import TableViewIcon from '@mui/icons-material/TableView';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import { CSVLink } from "react-csv";
 
-
-export default function YearChart() {
+export default function YearChart(props) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -23,8 +26,12 @@ export default function YearChart() {
     <Box m="5px" border={1} p={1} color={colors.grey[600]}> 
       <Header title="Ano de Publicação" 
       subtitle="Gráfico com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />
+      <IconButton onClick={props.toggleBool} sx={{ color: colors.primary[100] }}><TableViewIcon/><h5> Ver tabela</h5></IconButton>
+      <CSVLink filename={"yearChart.csv"} data={yearChartData}>
+            <IconButton sx={{ color: colors.primary[100] }}><FileDownloadIcon /><h5>CSV</h5></IconButton>
+      </CSVLink>
       <BarChart
-        width={600}
+        width={900}
         height={500}
         data={yearChartData}
         margin={{
