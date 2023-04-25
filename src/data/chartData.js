@@ -116,7 +116,7 @@ export const categoryChartData = [
     },
     {
         id: 2,
-        categoria: "Análise de Dados",
+        categoria: "Analise de Dados",
         total: 44,
         porcentagem: 40.74,
     },
@@ -137,7 +137,7 @@ export const categoryChartData = [
         categoria: "Ferramenta",
         total: 10,
         porcentagem: 9.26,
-    }
+    },
 ];
 
 export const categoryColumns = [
@@ -495,106 +495,106 @@ export const totalEventos = [
 ];
 
 export const contextData=[
-    {
-        id:1,
-        proposito: "Visibilidade ao tema",
-        analiseDados: 6,
-        projeto: 5,
-        programa: 2,
-        ferramenta: 7,
-        total: 20,
-        porcentagem: 18.52,
-    },
-    {
-        id:2,
-        proposito: "Perfil das mulheres",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
-    {
-        id:3,
-        proposito: "Fatores de influência",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
-    {
-        id:4,
-        proposito: "Fortalecimento, motivação e pertencimento",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
-    {
-        id:5,
-        proposito: "Representatividade acadêmica",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
-    {
-        id:6,
-        proposito: "Desempenho acadêmico",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
-    {
-        id:7,
-        proposito: "Representatividade no mercado",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
-    {
-        id:8,
-        proposito: "Desempenho no mercado",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
-    {
-        id:9,
-        proposito: "Representatividade na pesquisa",
-        analiseDados: 0,
-        projeto: 0,
-        programa: 0,
-        ferramenta: 0,
-        total: 0,
-        porcentagem: 0,
-    },
+        {
+            id:1,
+            contexto: "Visibilidade ao tema",
+            analiseDados: 6,
+            projeto: 5,
+            programa: 2,
+            ferramenta: 7,
+            total: 20,
+            porcentagem: 18.52,
+        },
+        {
+            id:2,
+            contexto: "Perfil das mulheres",
+            analiseDados: 6,
+            projeto: 0,
+            programa: 0,
+            ferramenta: 0,
+            total: 6,
+            porcentagem: 5.56,
+        },
+        {
+            id:3,
+          contexto: "Fatores de influência",
+          analiseDados: 9,
+          projeto: 3,
+          programa: 0,
+          ferramenta: 0,
+          total: 12,
+          porcentagem: 11.11
+        },
+        {
+            id:4,
+          contexto: "Fortalecimento, motivação e pertencimento",
+          analiseDados: 0,
+          projeto: 31,
+          programa: 13,
+          ferramenta: 3,
+          total: 47,
+          porcentagem: 43.52
+        },
+        {
+            id:5,
+          contexto: "Representatividade acadêmica",
+          analiseDados: 8,
+          projeto: 0,
+          programa: 0,
+          ferramenta: 0,
+          total: 8,
+          porcentagem: 7.41
+        },
+        {
+            id:6,
+          contexto: "Desempenho acadêmico",
+          analiseDados: 5,
+          projeto: 0,
+          programa: 0,
+          ferramenta: 0,
+          total: 5,
+          porcentagem: 4.63
+        },
+        {
+            id:7,
+          contexto: "Representatividade no mercado",
+          analiseDados: 2,
+          projeto: 0,
+          programa: 0,
+          ferramenta: 0,
+          total: 2,
+          porcentagem: 1.85
+        },
+        {
+            id:8,
+          contexto: "Desempenho no mercado",
+          analiseDados: 1,
+          projeto: 0,
+          programa: 0,
+          ferramenta: 0,
+          total: 1,
+          porcentagem: 0.93
+        },
+        {
+            id:9,
+          contexto: "Representatividade na pesquisa",
+          analiseDados: 7,
+          projeto: 0,
+          programa: 0,
+          ferramenta: 0,
+          total: 7,
+          porcentagem: 6.48
+        },
 ];
 
 export const contextColumns = [
     {
-        field: "proposito",
-        headerName: "Propósito do Artigo",
+        field: "contexto",
+        headerName: "Contexto do Artigo",
         type: "text",
         headerAlign: "left",
         align: "left",
-        flex: 1,
+        flex: 3,
       },
       {
         field: "analiseDados",
@@ -602,7 +602,7 @@ export const contextColumns = [
         type: "number",
         headerAlign: "left",
         align: "left",
-        flex: 1,
+        flex: 2,
       },
       {
           field: "projeto",
@@ -621,7 +621,7 @@ export const contextColumns = [
         flex: 1,
     },
     {
-        field: "ferramenta",
+        field: 'ferramenta',
         headerName: "Ferramenta",
         type: "number",
         headerAlign: "left",
@@ -629,17 +629,86 @@ export const contextColumns = [
         flex: 1,
     },
     {
-        field: "total",
-        headerName: "Total ",
+        field:"total",
+        headerName: "Total",
         type: "number",
         headerAlign: "left",
         align: "left",
+        flex: 1,
     },
     {
         field: "porcentagem",
-        headerName: "Porcentagem ",
+        headerName: "Porcentagem",
         type: "number",
         headerAlign: "left",
         align: "left",
+        flex: 1,
     },
+];
+
+export const techniqueData = [
+    {
+      tecnica: "Apresentação",
+      analiseDados: 0,
+      projeto: 9,
+      programa: 26,
+      ferramenta: 0,
+      total: 35
+    },
+    {
+      tecnica: "Campanha",
+      analiseDados: 0,
+      projeto: 4,
+      programa: 8,
+      ferramenta: 0,
+      total: 12
+    },
+    {
+      tecnica: "Curso",
+      analiseDados: 0,
+      projeto: 24,
+      programa: 17,
+      ferramenta: 0,
+      total: 41
+    },
+    {
+      tecnica: "Evento",
+      analiseDados: 0,
+      projeto: 2,
+      programa: 8,
+      ferramenta: 0,
+      total: 10
+    },
+    {
+      tecnica: "Fonte de Dados",
+      analiseDados: 42,
+      projeto: 4,
+      programa: 8,
+      ferramenta: 0,
+      total: 54
+    },
+    {
+      tecnica: "Gameficação",
+      analiseDados: 0,
+      projeto: 5,
+      programa: 4,
+      ferramenta: 9,
+      total: 18
+    },
+    {
+      tecnica: "Grupo Social",
+      analiseDados: 0,
+      projeto: 3,
+      programa: 4,
+      ferramenta: 0,
+      total: 7
+    },
+    {
+      tecnica: "Material",
+      analiseDados: 0,
+      projeto: 2,
+      programa: 2,
+      ferramenta: 1,
+      total: 5
+    }
 ];

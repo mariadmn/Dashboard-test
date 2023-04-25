@@ -8,12 +8,11 @@ import {
   Tooltip,
   Legend
 } from "recharts";
-import { eventChartData } from "../data/chartData";
+import { eventChartData } from "../../data/chartData";
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../themes";
-import Header from "./header";
+import { tokens } from "../../themes";
+import Header from "../header";
 import { Box } from "@mui/material";
-import TableViewIcon from '@mui/icons-material/TableView';
 
 export default function EventChart() {
     const theme = useTheme();
@@ -23,6 +22,7 @@ export default function EventChart() {
         <Box m="5px" border={1} p={1} color={colors.grey[600]}>
             <Header title="Artigos por Evento" 
              subtitle="Gráfico dos artigos publicados em cada evento nos anos de 2019, 2020, 2021 e 2022" />
+             
             <BarChart
                 width={500}
                 height={500}

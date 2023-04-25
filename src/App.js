@@ -1,19 +1,22 @@
 import { ColorModeContext, useMode } from "./themes";
 import { CssBaseline, ThemeProvider, Box } from "@mui/material";
 import Topbar from "./components/topbar";
-import YearTable from "./components/yearTable";
-import YearChart from "./components/yearChart";
-import CategoryChart from "./components/categoryChart";
-import EventChart from "./components/eventChart";
+import YearTable from "./components/year/yearTable";
+import YearChart from "./components/year/yearChart";
+import CategoryChart from "./components/category/categoryChart";
+import EventChart from "./components/event/eventChart";
 import EventChart2 from "./components/eventChart2";
-import ContextTable from "./components/contextTable";
+import ContextTable from "./components/context/contextTable";
 import { useState } from "react";
-import CategoryTable from "./components/categoryTable";
+import CategoryTable from "./components/category/categoryTable";
+import ContextChart from "./components/context/contextChart";
+import TechniqueChart from "./components/technique/techniqueChart";
 
 function App() {
   const [theme, colorMode] = useMode();
   const [isYearChart, setmyIsYearChart] = useState(true);
   const [isCategoryChart, setmyIsCategoryChart] = useState(true);
+  const [isContextChart, setmyIsContextChart] = useState(true);
 
   function toggleYearChart() {
     setmyIsYearChart(!isYearChart)
@@ -21,7 +24,9 @@ function App() {
   function toggleCategoryChart() {
     setmyIsCategoryChart(!isCategoryChart)
   }
-
+  function toggleContextChart() {
+    setmyIsContextChart(!isContextChart)
+  }
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -49,7 +54,8 @@ function App() {
               </Box>
               {/* Quarta Linha */}
               <Box display="flex" justifyContent="space-between" flexDirection="row">
-                <ContextTable />
+              {isContextChart ? <ContextChart  toggleBool={toggleContextChart} /> : <ContextTable  toggleBool={toggleContextChart} />} 
+              <TechniqueChart />
               </Box>
             </Box>
           </main>

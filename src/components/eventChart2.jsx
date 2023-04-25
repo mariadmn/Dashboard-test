@@ -13,8 +13,8 @@ import { useTheme } from "@mui/material/styles";
 import { tokens } from "../themes";
 import Header from "./header";
 import { Box } from "@mui/material";
-import { CSVLink } from "react-csv";
-import TableViewIcon from '@mui/icons-material/TableView';
+// import { CSVLink } from "react-csv";
+// import TableViewIcon from '@mui/icons-material/TableView';
 
 
 export default function EventChart2() {

@@ -1,8 +1,8 @@
 import { Box } from '@mui/material';
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../themes";
-import Header from "./header";
-import {categoryChartData} from "../data/chartData";
+import { tokens } from "../../themes";
+import Header from "../header";
+import {categoryChartData} from "../../data/chartData";
 import { PieChart, Pie, Cell, Sector } from 'recharts';
 import React, { useState, useCallback } from 'react';
 import { Typography } from '@mui/material';
@@ -97,33 +97,39 @@ export default function CategoryChart(props) {
 
   return (
       <Box m="5px" border={1} p={1} color={colors.grey[600]}>
-          <Header title="Categoria de Publicação" 
+        <Header title="Categoria de Publicação" 
             subtitle="Gráfico das categorias dos artigos" />
-          <IconButton onClick={props.toggleBool} sx={{ color: colors.primary[100] }}><TableViewIcon/><h5> Ver tabela</h5></IconButton>
-          <CSVLink filename={"categoryChart.csv"} data={categoryChartData}>
-            <IconButton sx={{ color: colors.primary[100] }}><FileDownloadIcon /><h5>CSV</h5></IconButton>
-          </CSVLink>
-          <PieChart width={600} height={400}>
-              <Pie
-                  activeIndex={activeIndex}
-                  activeShape={renderActiveShape}
-                  dataKey="total"
-                  data={categoryChartData}
-                  cx={300}
-                  cy={200}
-                  innerRadius={110}
-                  outerRadius={170}
-                  onMouseEnter={onPieEnter}
-              >
-                  {categoryChartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={chartColors[index % chartColors.length]} />
-                  ))}
-              </Pie>
-              <Pie dataKey="total"/>
-      </PieChart>
-      <Typography variant="h5" color={colors.primary[100]} justifySelf="center" marginTop={10}>
-          Total de artigos: {categoryChartData.reduce((total, item) => total + item.total, 0)}
-      </Typography>
-  </Box>
+            
+        <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
+          <TableViewIcon/><h5> Ver tabela</h5>
+        </IconButton>
+        <CSVLink filename={"categoryChart.csv"} data={categoryChartData}>
+          <IconButton sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
+            <FileDownloadIcon /><h5>CSV</h5>
+          </IconButton>
+        </CSVLink>
+
+        <PieChart width={600} height={400}>
+            <Pie
+                activeIndex={activeIndex}
+                activeShape={renderActiveShape}
+                dataKey="total"
+                data={categoryChartData}
+                cx={300}
+                cy={200}
+                innerRadius={110}
+                outerRadius={170}
+                onMouseEnter={onPieEnter}
+            >
+                {categoryChartData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={chartColors[index % chartColors.length]} />
+                ))}
+            </Pie>
+            <Pie dataKey="total"/>
+        </PieChart>
+        <Typography variant="h5" color={colors.primary[100]} justifySelf="center" marginTop={10}>
+            Total de artigos: {categoryChartData.reduce((total, item) => total + item.total, 0)}
+        </Typography>
+      </Box>
   );
 };
