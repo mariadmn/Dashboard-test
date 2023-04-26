@@ -169,6 +169,7 @@ export const categoryColumns = [
 
 export const eventChartData = [
     {
+        id: 1,
         ano: 2019,
         evento:{
             CB: 0,
@@ -187,6 +188,7 @@ export const eventChartData = [
         total: 22,
     },
     {
+        id: 2,
         ano: 2020,
         evento:{
             CB: 0,
@@ -205,6 +207,7 @@ export const eventChartData = [
         total: 28,
     },
     {
+        id: 3,
         ano: 2021,
         evento:{
             CB: 0,
@@ -223,6 +226,7 @@ export const eventChartData = [
         total: 36,
     },
     {
+        id: 4,
         ano: 2022,
         evento:{
             CB: 1,
@@ -257,10 +261,12 @@ export const colecaoData = [
         }
 ];
 
-export const totalEventos = [
+export const totalEvents = [
     {
+        id: 1,
         ano: 2010,
         evento:{
+            id: 1,
             CB: 0,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -277,8 +283,10 @@ export const totalEventos = [
         total: 48,
     },
     {
+        id: 2,
         ano: 2011,
         evento:{
+            id: 2,
             CB: 0,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -295,8 +303,10 @@ export const totalEventos = [
         total: 124,
     },
     {
+        id: 3,
         ano: 2012,
         evento:{
+            id: 3,
             CB: 0,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -313,8 +323,10 @@ export const totalEventos = [
         total: 154,
     },
     {
+        id: 4,
         ano: 2013,
         evento:{
+            id: 4,
             CB: 0,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -331,8 +343,10 @@ export const totalEventos = [
         total: 160,
     },
     {
+        id: 5,
         ano: 2014,
         evento:{
+            id: 5,
             CB: 0,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -349,8 +363,10 @@ export const totalEventos = [
         total: 211,
     },
     {
+        id: 6,
         ano: 2015,
         evento:{
+            id: 6,
             CB: 0,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -367,8 +383,10 @@ export const totalEventos = [
         total: 249,
     },
     {
+        id: 7,
         ano: 2016,
         evento:{
+            id: 7,
             CB: 0,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -385,8 +403,10 @@ export const totalEventos = [
         total: 287,
     },
     {
+        id: 8,
         ano: 2017,
         evento:{
+            id: 8,
             CB: 86,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -403,8 +423,10 @@ export const totalEventos = [
         total: 398,
     },
     {
+        id: 9,
         ano: 2018,
         evento:{
+            id: 9,
             CB: 81,
             EDUCOMP: 0,
             LATINOWARE: 0,
@@ -421,8 +443,10 @@ export const totalEventos = [
         total: 407,
     },
     {
+        id: 10,
         ano: 2019,
         evento:{
+            id: 10,
             CB: 88,
             EDUCOMP: 0,
             LATINOWARE: 32,
@@ -439,8 +463,10 @@ export const totalEventos = [
         total: 612,
     },
     {
+        id: 11,
         ano: 2020,
         evento:{
+            id: 11,
             CB: 70,
             EDUCOMP: 0,
             LATINOWARE: 32,
@@ -457,8 +483,10 @@ export const totalEventos = [
         total: 768,
     },
     {
+        id: 12,
         ano: 2021,
         evento:{
+            id: 12,
             CB: 50,
             EDUCOMP: 78,
             LATINOWARE: 31,
@@ -475,8 +503,10 @@ export const totalEventos = [
         total: 1238,
     },
     {
+        id: 13,
         ano: 2022,
         evento:{
+            id: 13,
             CB: 55,
             EDUCOMP: 58,
             LATINOWARE: 29,
@@ -491,6 +521,114 @@ export const totalEventos = [
             RBIE: 1,
         },
         total: 836,
+    },
+];
+
+export const eventsColumns = [
+    {
+        field: "ano",
+        headerName: "Ano",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.3,
+    },
+    {
+        field: "evento.CB",
+        // valueGetter: para
+        headerName: "CB",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.2,
+    },
+    {
+        field: "evento.EDUCOMP",
+        headerName: "EDUCOMP",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+    {
+        field: "evento.LATINOWARE",
+        headerName: "LATINOWARE",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+    {
+        field: "evento.SBES",
+        headerName: "SBES",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.6,
+    },
+    {
+        field: "evento.SBGAMES",
+        headerName: "SBGAMES",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+    {
+        field: "evento.SBIE",
+        headerName: "SBIE",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.6,
+    },
+    {
+        field: "evento.SBSI",
+        headerName: "SBSI",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.6,
+    },
+    {
+        field: "evento.SEMIEDU",
+        headerName: "SEMIEDU",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+    {
+        field: "evento.WEI",
+        headerName: "WEI",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.4,
+    },
+    {
+        field: "evento.WIE",
+        headerName: "WIE",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.4,
+    },
+    {
+        field: "evento.WIT",
+        headerName: "WIT",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.4,
+    },
+    {
+        field: "evento.RBIE",
+        headerName: "RBIE",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 0.5,
     },
 ];
 
@@ -514,76 +652,76 @@ export const contextData=[
             ferramenta: 0,
             total: 6,
             porcentagem: 5.56,
-        },
+    },
         {
             id:3,
-          contexto: "Fatores de influência",
-          analiseDados: 9,
-          projeto: 3,
-          programa: 0,
-          ferramenta: 0,
-          total: 12,
-          porcentagem: 11.11
+            contexto: "Fatores de influência",
+            analiseDados: 9,
+            projeto: 3,
+            programa: 0,
+            ferramenta: 0,
+            total: 12,
+            porcentagem: 11.11,
         },
         {
             id:4,
-          contexto: "Fortalecimento, motivação e pertencimento",
-          analiseDados: 0,
-          projeto: 31,
-          programa: 13,
-          ferramenta: 3,
-          total: 47,
-          porcentagem: 43.52
+            contexto: "Fortalecimento, motivação e pertencimento",
+            analiseDados: 0,
+            projeto: 31,
+            programa: 13,
+            ferramenta: 3,
+            total: 47,
+            porcentagem: 43.52,
         },
         {
             id:5,
-          contexto: "Representatividade acadêmica",
-          analiseDados: 8,
-          projeto: 0,
-          programa: 0,
-          ferramenta: 0,
-          total: 8,
-          porcentagem: 7.41
+            contexto: "Representatividade acadêmica",
+            analiseDados: 8,
+            projeto: 0,
+            programa: 0,
+            ferramenta: 0,
+            total: 8,
+            porcentagem: 7.41,
         },
         {
             id:6,
-          contexto: "Desempenho acadêmico",
-          analiseDados: 5,
-          projeto: 0,
-          programa: 0,
-          ferramenta: 0,
-          total: 5,
-          porcentagem: 4.63
+            contexto: "Desempenho acadêmico",
+            analiseDados: 5,
+            projeto: 0,
+            programa: 0,
+            ferramenta: 0,
+            total: 5,
+            porcentagem: 4.63,
         },
         {
             id:7,
-          contexto: "Representatividade no mercado",
-          analiseDados: 2,
-          projeto: 0,
-          programa: 0,
-          ferramenta: 0,
-          total: 2,
-          porcentagem: 1.85
+            contexto: "Representatividade no mercado",
+            analiseDados: 2,
+            projeto: 0,
+            programa: 0,
+            ferramenta: 0,
+            total: 2,
+            porcentagem: 1.85,
         },
         {
             id:8,
-          contexto: "Desempenho no mercado",
-          analiseDados: 1,
-          projeto: 0,
-          programa: 0,
-          ferramenta: 0,
-          total: 1,
-          porcentagem: 0.93
+            contexto: "Desempenho no mercado",
+            analiseDados: 1,
+            projeto: 0,
+            programa: 0,
+            ferramenta: 0,
+            total: 1,
+            porcentagem: 0.93,
         },
         {
             id:9,
-          contexto: "Representatividade na pesquisa",
-          analiseDados: 7,
-          projeto: 0,
-          programa: 0,
-          ferramenta: 0,
-          total: 7,
-          porcentagem: 6.48
+            contexto: "Representatividade na pesquisa",
+            analiseDados: 7,
+            projeto: 0,
+            programa: 0,
+            ferramenta: 0,
+            total: 7,
+            porcentagem: 6.48,
         },
 ];
 
@@ -648,67 +786,127 @@ export const contextColumns = [
 
 export const techniqueData = [
     {
-      tecnica: "Apresentação",
-      analiseDados: 0,
-      projeto: 9,
-      programa: 26,
-      ferramenta: 0,
-      total: 35
+        id:1,
+        tecnica: "Apresentação",
+        analiseDados: 0,
+        projeto: 9,
+        programa: 26,
+        ferramenta: 0,
+        total: 35
     },
     {
-      tecnica: "Campanha",
-      analiseDados: 0,
-      projeto: 4,
-      programa: 8,
-      ferramenta: 0,
-      total: 12
+        id:2,
+        tecnica: "Campanha",
+        analiseDados: 0,
+        projeto: 4,
+        programa: 8,
+        ferramenta: 0,
+        total: 12
     },
     {
-      tecnica: "Curso",
-      analiseDados: 0,
-      projeto: 24,
-      programa: 17,
-      ferramenta: 0,
-      total: 41
+        id:3,
+        tecnica: "Curso",
+        analiseDados: 0,
+        projeto: 24,
+        programa: 17,
+        ferramenta: 0,
+        total: 41
     },
     {
-      tecnica: "Evento",
-      analiseDados: 0,
-      projeto: 2,
-      programa: 8,
-      ferramenta: 0,
-      total: 10
+        id:4,
+        tecnica: "Evento",
+        analiseDados: 0,
+        projeto: 2,
+        programa: 8,
+        ferramenta: 0,
+        total: 10
     },
     {
-      tecnica: "Fonte de Dados",
-      analiseDados: 42,
-      projeto: 4,
-      programa: 8,
-      ferramenta: 0,
-      total: 54
+        id:5,
+        tecnica: "Fonte de Dados",
+        analiseDados: 42,
+        projeto: 4,
+        programa: 8,
+        ferramenta: 0,
+        total: 54
     },
     {
-      tecnica: "Gameficação",
-      analiseDados: 0,
-      projeto: 5,
-      programa: 4,
-      ferramenta: 9,
-      total: 18
+        id:6,
+        tecnica: "Gameficação",
+        analiseDados: 0,
+        projeto: 5,
+        programa: 4,
+        ferramenta: 9,
+        total: 18
     },
     {
-      tecnica: "Grupo Social",
-      analiseDados: 0,
-      projeto: 3,
-      programa: 4,
-      ferramenta: 0,
-      total: 7
+        id:7,
+        tecnica: "Grupo Social",
+        analiseDados: 0,
+        projeto: 3,
+        programa: 4,
+        ferramenta: 0,
+        total: 7
     },
     {
-      tecnica: "Material",
-      analiseDados: 0,
-      projeto: 2,
-      programa: 2,
-      ferramenta: 1,
-      total: 5
+        id:8,
+        tecnica: "Material",
+        analiseDados: 0,
+        projeto: 2,
+        programa: 2,
+        ferramenta: 1,
+        total: 5
     }
+];
+
+
+export const techniqueColumns = [
+    {
+        field: "tecnica",
+        headerName: "Técnica",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 2,
+    },
+    {
+        field: "analiseDados",
+        headerName: "Análise de Dados",
+        type: "number",
+        headerAlign: "left",
+        align: "left",
+        flex: 2,
+    },
+    {
+        field: "projeto",
+        headerName: "Projeto",
+        type: "number",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+    {
+        field: "programa",
+        headerName: "Programa",
+        type: "number",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+    {
+        field: 'ferramenta',
+        headerName: "Ferramenta",
+        type: "number",
+        headerAlign: "left",
+        align: "left",
+        flex: 2,
+    },
+    {
+        field:"total",
+        headerName: "Total",
+        type: "number",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
 ];

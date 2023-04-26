@@ -7,6 +7,7 @@ import {
   Legend,
   AreaChart,
   Area,
+  ResponsiveContainer,
 } from "recharts";
 import { yearChartData } from "../../data/chartData";
 import { Box } from "@mui/material";
@@ -23,7 +24,8 @@ export default function YearChart(props) {
   const colors = tokens(theme.palette.mode);
 
   return (
-      <Box m="5px" border={1} p={1} color={colors.grey[600]}> 
+    <ResponsiveContainer>
+      <Box>
         <Header title="Ano de Publicação" 
         subtitle="Gráfico com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />
 
@@ -56,5 +58,6 @@ export default function YearChart(props) {
           <Area type="monotone" name="Total de publicações na temática" dataKey="totalPublicacoesTematica" stroke={colors.orangeAccent[600]} fill={colors.orangeAccent[600]}/>
         </AreaChart>
       </Box>
+    </ResponsiveContainer>
   );
 }

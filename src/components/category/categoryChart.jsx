@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
 import Header from "../header";
 import {categoryChartData} from "../../data/chartData";
-import { PieChart, Pie, Cell, Sector } from 'recharts';
+import { PieChart, Pie, Cell, Sector, ResponsiveContainer } from 'recharts';
 import React, { useState, useCallback } from 'react';
 import { Typography } from '@mui/material';
 import TableViewIcon from '@mui/icons-material/TableView';
@@ -96,7 +96,8 @@ export default function CategoryChart(props) {
   );
 
   return (
-      <Box m="5px" border={1} p={1} color={colors.grey[600]}>
+    <ResponsiveContainer>
+      <Box>
         <Header title="Categoria de Publicação" 
             subtitle="Gráfico das categorias dos artigos" />
             
@@ -131,5 +132,6 @@ export default function CategoryChart(props) {
             Total de artigos: {categoryChartData.reduce((total, item) => total + item.total, 0)}
         </Typography>
       </Box>
+    </ResponsiveContainer>
   );
 };

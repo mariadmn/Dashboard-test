@@ -16,6 +16,7 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
+    ResponsiveContainer,
   } from "recharts";
 
 
@@ -24,9 +25,10 @@ export default function TechniqueChart(props) {
     const colors = tokens(theme.palette.mode);
 
     return(
-            <Box m="5px" border={1} p={1} color={colors.grey[600]}>
-                <Header title="Técnicas de Pesquisa" 
-                    subtitle="Gráfico das categorias dos artigos" />
+        <ResponsiveContainer>
+            <Box>
+                <Header title="Técnicas do artigo" 
+                    subtitle="Gráfico das técnicas dos artigos" />
 
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <TableViewIcon/><h5> Ver tabela</h5>
@@ -64,5 +66,6 @@ export default function TechniqueChart(props) {
                     <Bar name="Ferramenta" dataKey="ferramenta"  stackId="a" fill={colors.greenAccent[500]} />
                 </BarChart>
             </Box>
+        </ResponsiveContainer>
     );
 };

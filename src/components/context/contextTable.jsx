@@ -7,6 +7,7 @@ import { tokens } from "../../themes";
 import Header from "../header";
 import IconButton from "@mui/material/IconButton";
 import PieChartIcon from '@mui/icons-material/PieChart';
+import { ResponsiveContainer } from "recharts";
 
 
 export default function ContextTable(props) {
@@ -14,7 +15,8 @@ export default function ContextTable(props) {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="5px" border={1} p={1} color={colors.grey[600]}>
+    <ResponsiveContainer>
+      <Box>
       <Header title="Contexto do Artigo" 
       subtitle="Tabela com a quantidade de artigos divididos pelos seus contextos" />
       
@@ -22,7 +24,7 @@ export default function ContextTable(props) {
         <PieChartIcon/><h5> Ver gráfico</h5>
       </IconButton>
       
-      <Box display="flex" height="500px" width="900px"
+      <Box display="flex" height="500px" width="100%"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",
@@ -51,12 +53,13 @@ export default function ContextTable(props) {
             color: `${colors.grey[100]} !important`,
           },
         }}>
-        <DataGrid 
-          rows={contextData}
-          columns={contextColumns}
-          components={{ Toolbar: GridToolbar }}
-        />
+          <DataGrid 
+            rows={contextData}
+            columns={contextColumns}
+            components={{ Toolbar: GridToolbar }}
+          />
+        </Box>
       </Box>
-    </Box>
+    </ResponsiveContainer>
   );
 };

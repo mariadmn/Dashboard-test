@@ -8,7 +8,7 @@ const Topbar = () => {
     const colors = tokens(theme.palette.mode);
 
     return (
-    <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[600]}>
+    <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[200]}>
         <Box display="flex" color={colors.primary[100]}><h1>Bem-Vindo!</h1></Box>
         <Box display="flex" alignItems="center">
             <IconButton onClick={colorMode.toggleColorMode}>
