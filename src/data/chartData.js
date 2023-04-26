@@ -535,7 +535,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.CB",
-        // valueGetter: para
+        valueGetter: (params) => params.row.evento.CB,
         headerName: "CB",
         type: "text",
         headerAlign: "left",
@@ -544,6 +544,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.EDUCOMP",
+        valueGetter: (params) => params.row.evento.EDUCOMP,
         headerName: "EDUCOMP",
         type: "text",
         headerAlign: "left",
@@ -552,6 +553,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.LATINOWARE",
+        valueGetter: (params) => params.row.evento.LATINOWARE,
         headerName: "LATINOWARE",
         type: "text",
         headerAlign: "left",
@@ -560,6 +562,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.SBES",
+        valueGetter: (params) => params.row.evento.SBES,
         headerName: "SBES",
         type: "text",
         headerAlign: "left",
@@ -568,6 +571,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.SBGAMES",
+        valueGetter: (params) => params.row.evento.SBGAMES,
         headerName: "SBGAMES",
         type: "text",
         headerAlign: "left",
@@ -576,6 +580,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.SBIE",
+        valueGetter: (params) => params.row.evento.SBIE,
         headerName: "SBIE",
         type: "text",
         headerAlign: "left",
@@ -584,6 +589,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.SBSI",
+        valueGetter: (params) => params.row.evento.SBSI,
         headerName: "SBSI",
         type: "text",
         headerAlign: "left",
@@ -592,6 +598,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.SEMIEDU",
+        valueGetter: (params) => params.row.evento.SEMIEDU,
         headerName: "SEMIEDU",
         type: "text",
         headerAlign: "left",
@@ -600,6 +607,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.WEI",
+        valueGetter: (params) => params.row.evento.WEI,
         headerName: "WEI",
         type: "text",
         headerAlign: "left",
@@ -608,6 +616,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.WIE",
+        valueGetter: (params) => params.row.evento.WIE,
         headerName: "WIE",
         type: "text",
         headerAlign: "left",
@@ -616,6 +625,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.WIT",
+        valueGetter: (params) => params.row.evento.WIT,
         headerName: "WIT",
         type: "text",
         headerAlign: "left",
@@ -624,6 +634,7 @@ export const eventsColumns = [
     },
     {
         field: "evento.RBIE",
+        valueGetter: (params) => params.row.evento.RBIE,
         headerName: "RBIE",
         type: "text",
         headerAlign: "left",
