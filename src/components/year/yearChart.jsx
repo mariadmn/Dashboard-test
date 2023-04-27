@@ -24,9 +24,9 @@ export default function YearChart(props) {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <ResponsiveContainer>
-      <Box>
-        <Header title="Ano de Publicação" 
+    <div style={{ width: "100%", height: 500 }}>
+      <Box >
+      <Header title="Ano de Publicação" 
         subtitle="Gráfico com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />
 
         <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
@@ -37,7 +37,8 @@ export default function YearChart(props) {
             <FileDownloadIcon /><h5>CSV</h5>
           </IconButton>
         </CSVLink>
-        
+      </Box>
+      <ResponsiveContainer >
         <AreaChart
           data={yearChartData}
           width={900}
@@ -57,7 +58,7 @@ export default function YearChart(props) {
           <Area type="monotone" name="Total de publicações" dataKey="totalPublicacoes" stackId="1" stroke={colors.greenAccent[500]} fill={colors.greenAccent[500]}/>
           <Area type="monotone" name="Total de publicações na temática" dataKey="totalPublicacoesTematica" stroke={colors.orangeAccent[600]} fill={colors.orangeAccent[600]}/>
         </AreaChart>
-      </Box>
     </ResponsiveContainer>
+    </div>
   );
 }

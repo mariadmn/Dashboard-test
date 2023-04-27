@@ -25,7 +25,7 @@ export default function ContextChart(props){
     const colors = tokens(theme.palette.mode);
 
     return(
-        <ResponsiveContainer>
+        <div style={{ width: "100%", height: 500 }}>
             <Box>
                 <Header title="Contexto do Artigo" 
                 subtitle="Gráfico com a quantidade de artigos divididos pelos seus contextos" />
@@ -38,7 +38,8 @@ export default function ContextChart(props){
                         <FileDownloadIcon /><h5>CSV</h5>
                     </IconButton>
                 </CSVLink>
-
+            </Box>
+            <ResponsiveContainer>
                 <BarChart
                     width={900}
                     height={500}
@@ -65,7 +66,7 @@ export default function ContextChart(props){
                     <Bar nmae="Programa" dataKey="programa" stackId="a" fill={colors.redAccent[500]} />
                     <Bar name="Ferramenta" dataKey="ferramenta"  stackId="a" fill={colors.greenAccent[500]} />
                 </BarChart>
-            </Box>
-        </ResponsiveContainer>
+            </ResponsiveContainer>
+        </div>
     );
 };

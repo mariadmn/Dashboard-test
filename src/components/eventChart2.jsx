@@ -26,8 +26,8 @@ export default function EventChart2(props) {
     console.log(totalEvents);
     // const chartColors = [colors.blueAccent[400], colors.blueAccent[500], colors.blueAccent[600], colors.blueAccent[700], colors.blueAccent[800]];
     return (
-        <ResponsiveContainer>
-            <Box >
+        <div style={{ width: "100%", height: 500 }}>
+            <Box>
                 <Header title="Eventos realizados por Ano" 
                 subtitle="Gráfico dos eventos realizados entre 2010 e 2022" />
 
@@ -39,7 +39,8 @@ export default function EventChart2(props) {
                         <FileDownloadIcon /><h5>CSV</h5>
                     </IconButton>
                 </CSVLink> */}
-                
+            </Box>
+            <ResponsiveContainer>
                 <BarChart
                     width={750}
                     height={550}
@@ -69,7 +70,7 @@ export default function EventChart2(props) {
                     <Bar name="WIT" dataKey="evento.WIT" stackId="a" fill={colors.redAccent[600]} />
                     <Bar name="RBIE" dataKey="evento.RBIE" stackId="a" fill={colors.orangeAccent[600]} />
                 </BarChart>
-            </Box>
-        </ResponsiveContainer>
+            </ResponsiveContainer>
+        </div>
     );
 }

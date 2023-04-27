@@ -16,15 +16,13 @@ import Header from "../header";
 import { Box } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import TableViewIcon from '@mui/icons-material/TableView';
-import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import { CSVLink } from "react-csv";
 
 export default function EventChart(props) {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    // const chartColors = [colors.blueAccent[400], colors.blueAccent[500], colors.blueAccent[600], colors.blueAccent[700], colors.blueAccent[800]];
+
     return (
-        <ResponsiveContainer>
+        <div style={{ width: "100%", height: 500 }}>
             <Box >
                 <Header title="Artigos por Evento" 
                 subtitle="Gráfico dos artigos publicados em cada evento nos anos de 2019, 2020, 2021 e 2022" />
@@ -36,7 +34,8 @@ export default function EventChart(props) {
                         <FileDownloadIcon /><h5>CSV</h5>
                     </IconButton>
                 </CSVLink> */}
-
+            </Box>
+            <ResponsiveContainer>
                 <BarChart
                     width={700}
                     height={500}
@@ -66,7 +65,7 @@ export default function EventChart(props) {
                     <Bar name="WIT" dataKey="evento.WIT" stackId="a" fill={colors.redAccent[600]} />
                     <Bar name="RBIE" dataKey="evento.RBIE" stackId="a" fill={colors.orangeAccent[600]} />
                 </BarChart>
-            </Box>
-        </ResponsiveContainer>
+            </ResponsiveContainer>
+        </div>
     );
 }

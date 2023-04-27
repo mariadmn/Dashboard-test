@@ -86,7 +86,7 @@ const renderActiveShape = (props) => {
 export default function CategoryChart(props) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const chartColors = [colors.blueAccent[400], colors.blueAccent[500], colors.blueAccent[600], colors.blueAccent[700], colors.blueAccent[800]];
+  const chartColors = [colors.blueAccent[500], colors.greenAccent[500], colors.redAccent[500], colors.blueAccent[700], colors.orangeAccent[500]];
   const [activeIndex, setActiveIndex] = useState(0);
   const onPieEnter = useCallback(
       (_, index) => {
@@ -96,11 +96,15 @@ export default function CategoryChart(props) {
   );
 
   return (
-    <ResponsiveContainer>
-      <Box>
+    //NAO TA FUNIONANDO O RESPONSIVE CONTAINER
+    <div style={{ width: "100%", height: 500 }}>
+      <Box >
         <Header title="Categoria de Publicação" 
-            subtitle="Gráfico das categorias dos artigos" />
-            
+          subtitle="Gráfico das categorias dos artigos" />
+    
+        <Typography variant="h5" color={colors.primary[100]} justifySelf="center" marginTop={10}>
+          Total de artigos: {categoryChartData.reduce((total, item) => total + item.total, 0)}
+        </Typography>
         <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
           <TableViewIcon/><h5> Ver tabela</h5>
         </IconButton>
@@ -109,8 +113,9 @@ export default function CategoryChart(props) {
             <FileDownloadIcon /><h5>CSV</h5>
           </IconButton>
         </CSVLink>
-
-        <PieChart width={600} height={400}>
+      </Box>
+      <ResponsiveContainer>
+        <PieChart width={600} height={500}>
             <Pie
                 activeIndex={activeIndex}
                 activeShape={renderActiveShape}
@@ -126,12 +131,8 @@ export default function CategoryChart(props) {
                 <Cell key={`cell-${index}`} fill={chartColors[index % chartColors.length]} />
                 ))}
             </Pie>
-            <Pie dataKey="total"/>
         </PieChart>
-        <Typography variant="h5" color={colors.primary[100]} justifySelf="center" marginTop={10}>
-            Total de artigos: {categoryChartData.reduce((total, item) => total + item.total, 0)}
-        </Typography>
-      </Box>
-    </ResponsiveContainer>
+      </ResponsiveContainer>
+    </div>
   );
 };
