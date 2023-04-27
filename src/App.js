@@ -18,7 +18,7 @@ import { tokens } from "./themes";
 import { useTheme } from "@mui/material/styles";
 
 function App() {
-  const [mode, colorMode] = useMode();
+  const [theme, colorMode] = useMode();
   const [isYearChart, setmyIsYearChart] = useState(true);
   const [isCategoryChart, setmyIsCategoryChart] = useState(true);
   const [isContextChart, setmyIsContextChart] = useState(true);
@@ -44,7 +44,7 @@ function App() {
   function toggleEvent2Chart() {
     setmyIsEvent2Chart(!isEvent2Chart)
   }
-  const theme = useTheme();
+  // const mode = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
