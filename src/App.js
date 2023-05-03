@@ -1,6 +1,5 @@
-import { ColorModeContext, useMode } from "./themes";
-import { CssBaseline, ThemeProvider, Box } from "@mui/material";
-import Topbar from "./components/topbar";
+import { ColorModeContext, useMode, tokens } from "./themes";
+import { CssBaseline, ThemeProvider, Box, IconButton } from "@mui/material";
 import YearTable from "./components/year/yearTable";
 import YearChart from "./components/year/yearChart";
 import CategoryChart from "./components/category/categoryChart";
@@ -14,8 +13,9 @@ import ContextTable from "./components/context/contextTable";
 import ContextChart from "./components/context/contextChart";
 import TechniqueChart from "./components/technique/techniqueChart";
 import TechniqueTable from "./components/technique/techniqueTable";
-import { tokens } from "./themes";
-import { useTheme } from "@mui/material/styles";
+import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+// import { useTheme } from "@mui/material/styles";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -25,6 +25,7 @@ function App() {
   const [isTechniqueChart, setmyIsTechniqueChart] = useState(true);
   const [isEventChart, setmyIsEventChart] = useState(true);
   const [isEvent2Chart, setmyIsEvent2Chart] = useState(true);
+  const [isDark, setmyIsDark] = useState(true);
 
   function toggleYearChart() {
     setmyIsYearChart(!isYearChart)
@@ -44,6 +45,12 @@ function App() {
   function toggleEvent2Chart() {
     setmyIsEvent2Chart(!isEvent2Chart)
   }
+  function toggleIsDark() {
+    colorMode.toggleColorMode()
+    setmyIsDark(!isDark)
+  }
+
+  
   // const mode = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -55,13 +62,22 @@ function App() {
           <main className="content">
             {/* Topbar */}
             <Box display="flex" justifyContent="space-between" flexDirection="column" style={{ width: "100%", height: "100%" }} >
-              <Topbar style={{ width: "100%", height: "10%" }}/>
+              {/* <Topbar toggleBool={colorMode.toggleColorMode} style={{ width: "100%", height: "10%" }}/> */}
+              <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[200]}>
+                <Box display="flex" color={colors.primary[100]}><h1>Bem-Vindo!</h1></Box>
+                <Box display="flex" alignItems="center">
+                  <IconButton onClick={toggleIsDark}>
+                      {isDark ? <LightModeOutlinedIcon /> :  <NightlightOutlinedIcon />}
+                  </IconButton>
+                </Box>
+              </Box>
+              
 
               {/* Graficos */}
 
               {/* Primeira Linha */}
               <Box display="flex" justifyContent="space-between" flexDirection="row" paddingBottom={1} >
-                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{ width: "60%", height: 800 }}> 
+                <Box m="5px" p={1}  style={{ width: "60%", height: 800 }}> 
                   {isYearChart ? <YearChart toggleBool={toggleYearChart} /> : <YearTable  toggleBool={toggleYearChart} />} 
                 </Box>
                 <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{ width: "39%", height: 800 }}>
@@ -72,10 +88,10 @@ function App() {
               {/* Segunda Linha */}
               <Box display="flex" justifyContent="space-between" flexDirection="row" paddingBottom={1} >
                 <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{ width: "50%", height: 800  }}>
-                {isEvent2Chart ? <EventChart2  toggleBool={toggleEvent2Chart} /> : <EventTable2  toggleBool={toggleEvent2Chart} />} 
+                  {isEvent2Chart ? <EventChart2  toggleBool={toggleEvent2Chart} /> : <EventTable2  toggleBool={toggleEvent2Chart} />} 
                 </Box>
                 <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{ width: "49%", height: 800  }}>
-                {isEventChart ? <EventChart  toggleBool={toggleEventChart} /> : <EventTable  toggleBool={toggleEventChart} />} 
+                  {isEventChart ? <EventChart  toggleBool={toggleEventChart} /> : <EventTable  toggleBool={toggleEventChart} />} 
                 </Box>
               </Box>
 
