@@ -23,7 +23,6 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 export default function EventChart2(props) {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    console.log(totalEvents);
     // const chartColors = [colors.blueAccent[400], colors.blueAccent[500], colors.blueAccent[600], colors.blueAccent[700], colors.blueAccent[800]];
     return (
         <div style={{ width: "100%", height: 500 }}>

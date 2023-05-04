@@ -921,3 +921,40 @@ export const techniqueColumns = [
         flex: 1,
     },
 ];
+
+export const brazilChartData = [
+    ["Estado", "Total de Artigos"],
+    ["Acre",0],
+    ["Alagoas",4],
+    ["Amapá",1],
+    ["Amazonas",0],
+    ["Bahia",2],
+    ["Ceará",3],
+    ["Distrito Federal",5],
+    ["Espírito Santo",2],
+    ["Goiás",3],
+    ["Maranhão",2],
+    ["Mato Grosso",2],
+    ["Mato Grosso do Sul",1],
+    ["Minas Gerais",11],
+    ["Pará",2],
+    ["Paraíba",5],
+    ["Paraná",4],
+    ["Pernambuco",1],
+    ["Piauí",0],
+    ["Rio de Janeiro",7],
+    ["Rio Grande do Norte",2],
+    ["Rio Grande do Sul",8],
+    ["Rondônia",0],
+    ["Roraima",0],
+    ["Santa Catarina",7],
+    ["São Paulo",6],
+    ["Sergipe",1],
+    ["Tocantins",0],
+];
+
+export const worldChartData = [
+    ['Código da Região', 'Continente', 'Total de Artigos'],
+    ['021', 'América do Norte', 3],
+    ['005', 'América do Sul', 83],
+];

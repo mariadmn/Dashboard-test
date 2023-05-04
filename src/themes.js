@@ -170,7 +170,7 @@ export const themeSettings = (mode) => {
         : {
             // palette values for light mode
             primary: {
-              main: colors.primary[100],
+              main: colors.grey[100],
             },
             secondary: {
               main: colors.greenAccent[500],
@@ -233,7 +233,6 @@ export const useMode = () => {
         }),
         []
       );
-      console.log(mode);
     const isDark = mode === "dark" ? true : false;
   
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);

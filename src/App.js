@@ -15,6 +15,10 @@ import TechniqueChart from "./components/technique/techniqueChart";
 import TechniqueTable from "./components/technique/techniqueTable";
 import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import { WorldChart } from "./components/geoCharts/worldChart";
+import { BrazilChart } from "./components/geoCharts/brazilChart";
+import { BrazilRegionsChart } from "./components/geoCharts/brazilRegionsChart";
+import { PizzaChart } from "./components/category/pieChartExample";
 // import { useTheme } from "@mui/material/styles";
 
 function App() {
@@ -62,7 +66,6 @@ function App() {
           <main className="content">
             {/* Topbar */}
             <Box display="flex" justifyContent="space-between" flexDirection="column" style={{ width: "100%", height: "100%" }} >
-              {/* <Topbar toggleBool={colorMode.toggleColorMode} style={{ width: "100%", height: "10%" }}/> */}
               <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[200]}>
                 <Box display="flex" color={colors.primary[100]}><h1>Bem-Vindo!</h1></Box>
                 <Box display="flex" alignItems="center">
@@ -104,6 +107,17 @@ function App() {
                   {isTechniqueChart ? <TechniqueChart  toggleBool={toggleTechniqueChart} /> : <TechniqueTable  toggleBool={toggleTechniqueChart} />} 
                 </Box>
               </Box>
+
+              {/* Quarta Linha */}
+              <Box display="flex" justifyContent="space-between" flexDirection="row" paddingBottom={1} >
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{ width: "54%", height: 800  }}>
+                  <WorldChart/> 
+                </Box>
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{ width: "45%", height: 800  }}>
+                  <BrazilChart/> 
+                </Box>
+              </Box>
+
             </Box>
           </main>
         </div>

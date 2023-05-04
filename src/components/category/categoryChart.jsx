@@ -10,6 +10,7 @@ import TableViewIcon from '@mui/icons-material/TableView';
 import IconButton from "@mui/material/IconButton";
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import { CSVLink } from "react-csv";
+import { Chart } from "react-google-charts";
 
 const renderActiveShape = (props) => {
     const RADIAN = Math.PI / 180;
@@ -83,6 +84,7 @@ const renderActiveShape = (props) => {
     );
   };
 
+
 export default function CategoryChart(props) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -96,15 +98,14 @@ export default function CategoryChart(props) {
   );
 
   return (
-    //NAO TA FUNIONANDO O RESPONSIVE CONTAINER
     <div style={{ width: "100%", height: 500 }}>
       <Box >
         <Header title="Categoria de Publicação" 
           subtitle="Gráfico das categorias dos artigos" />
     
-        <Typography variant="h5" color={colors.primary[100]} justifySelf="center" marginTop={10}>
+        {/* <Typography variant="h5" color={colors.primary[100]} justifySelf="center" marginTop={10}>
           Total de artigos: {categoryChartData.reduce((total, item) => total + item.total, 0)}
-        </Typography>
+        </Typography> */}
         <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
           <TableViewIcon/><h5> Ver tabela</h5>
         </IconButton>
