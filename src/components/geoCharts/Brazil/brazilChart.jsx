@@ -3,13 +3,13 @@ import { Chart } from "react-google-charts";
 import { ResponsiveContainer } from "recharts";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../../themes";
+import { tokens } from "../../../themes";
 import { CSVLink } from "react-csv";
 import { IconButton } from "@mui/material";
 import TableViewIcon from '@mui/icons-material/TableView';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import Header from "../header";
-import { brazilChartData } from "../../data/chartData";
+import Header from "../../header";
+import { brazilChartData } from "../../../data/chartData";
 
 
 
@@ -27,7 +27,7 @@ export function BrazilChart(props) {
           </IconButton>
           <CSVLink filename={"brazilChart.csv"} data={brazilChartData}>
               <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
-                  <FileDownloadIcon /><h5>CSV</h5>
+                  <FileDownloadIcon /><h5>Exportar</h5>
               </IconButton>
           </CSVLink>
         </Box>
@@ -51,8 +51,8 @@ export function BrazilChart(props) {
             options = {{
             region : "BR",
             resolution: 'provinces',
-            colorAxis: { colors: [colors.blueAccent[500], colors.greenAccent[500], colors.orangeAccent[500]] },
-            datalessRegionColor: colors.grey[500],
+            colorAxis: { colors: [colors.grey[500], colors.blueAccent[500], colors.greenAccent[500], colors.orangeAccent[500]] },
+            datalessRegionColor: colors.grey[600],
             backgroundColor: { fill:'transparent'},
             }}
             data={brazilChartData}

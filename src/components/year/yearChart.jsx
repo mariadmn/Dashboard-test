@@ -34,7 +34,7 @@ export default function YearChart(props) {
         </IconButton>
         <CSVLink filename={"yearChart.csv"} data={yearChartData}>
           <IconButton sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
-            <FileDownloadIcon /><h5>CSV</h5>
+            <FileDownloadIcon /><h5>Exportar</h5>
           </IconButton>
         </CSVLink>
       </Box>

@@ -31,7 +31,7 @@ export default function EventChart(props) {
                 </IconButton>
                 {/* <CSVLink filename={"eventChart.csv"} data={eventChartData}>
                     <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
-                        <FileDownloadIcon /><h5>CSV</h5>
+                        <FileDownloadIcon /><h5>Exportar</h5>
                     </IconButton>
                 </CSVLink> */}
             </Box>

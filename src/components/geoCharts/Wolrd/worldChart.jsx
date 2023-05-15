@@ -3,13 +3,13 @@ import { Chart } from "react-google-charts";
 import { ResponsiveContainer } from "recharts";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../../themes";
+import { tokens } from "../../../themes";
 import { CSVLink } from "react-csv";
 import { IconButton } from "@mui/material";
 import TableViewIcon from '@mui/icons-material/TableView';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import Header from "../header";
-import { worldChartData } from "../../data/chartData";
+import Header from "../../header";
+import { worldChartData } from "../../../data/chartData";
 
 
 
@@ -36,11 +36,11 @@ export function WorldChart(props) {
             <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                 <TableViewIcon/><h5> Ver tabela</h5>
             </IconButton>
-            {/* <CSVLink filename={"contextChart.csv"} data={contextData}>
+            <CSVLink filename={"worldChart.csv"} data={worldChartData}>
                 <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
-                    <FileDownloadIcon /><h5>CSV</h5>
+                    <FileDownloadIcon /><h5>Exportar</h5>
                 </IconButton>
-            </CSVLink> */}
+            </CSVLink>
         </Box>
         <ResponsiveContainer>
             <Chart

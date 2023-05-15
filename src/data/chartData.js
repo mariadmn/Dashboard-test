@@ -953,6 +953,198 @@ export const brazilChartData = [
     ["Tocantins",0],
 ];
 
+export const brazilTableData = [
+    {
+        id: 1,
+        estado: "Acre",
+        total: 0
+    },
+    {
+        id: 2,
+        estado: "Alagoas",
+        total: 4
+    },
+    {
+        id: 3,
+        estado: "Amapá",
+        total: 1
+    },
+    {
+        id: 4,
+        estado: "Amazonas",
+        total: 0
+    },
+    {
+        id: 5,
+        estado: "Bahia",
+        total: 2
+    },
+    {
+        id: 6,
+        estado: "Ceará",
+        total: 3
+    },
+    {
+        id: 7,
+        estado: "Distrito Federal",
+        total: 5
+    },
+    {
+        id: 8,
+        estado: "Espírito Santo",
+        total: 2
+    },
+    {
+        id: 9,
+        estado: "Goiás",
+        total: 3
+    },
+    {
+        id: 10,
+
+        estado: "Maranhão",
+        total: 2
+    },
+    {
+        id: 11,
+        estado: "Mato Grosso",
+        total: 2
+    },
+    {
+        id: 12,
+        estado: "Mato Grosso do Sul",
+        total: 1
+    },
+    {
+        id: 13,
+        estado: "Minas Gerais",
+        total: 11
+    },
+    {
+        id: 14,
+        estado: "Pará",
+        total: 2
+    },
+    {
+        id: 15,
+        estado: "Paraíba",
+        total: 5
+    },
+    {
+        id: 16,
+        estado: "Paraná",
+        total: 4
+    },
+    {
+        id: 17,
+        estado: "Pernambuco",
+        total: 1
+    },
+    {
+        id: 18,
+        estado: "Piauí",
+        total: 0
+    },
+    {
+        id: 19,
+        estado: "Rio de Janeiro",
+        total: 7
+    },
+    {
+        id: 20,
+        estado: "Rio Grande do Norte",
+        total: 2
+    },
+    {
+        id: 21,
+        estado: "Rio Grande do Sul",
+        total: 8
+    },
+    {
+        id: 22,
+        estado: "Rondônia",
+        total: 0
+    },
+    {
+        id: 23,
+        estado: "Roraima",
+        total: 0
+    },
+    {
+        id: 24,
+        estado: "Santa Catarina",
+        total: 7
+    },
+    {
+        id: 25,
+        estado: "São Paulo",
+        total: 6
+    },
+    {
+        id: 26,
+        estado: "Sergipe",
+        total: 1
+    },
+    {
+        id: 27,
+        estado: "Tocantins",
+        total: 0
+    },
+
+];
+
+export const brazilTableColumns = [
+    {
+        field: "estado",
+        headerName: "Estado",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 2,
+    },
+    {
+        field: "total",
+        headerName: "Total de Artigos",
+        type: "number",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+];
+
+export const worldTableColumns = [
+    {
+        field: "regiao",
+        headerName: "Região",
+        type: "text",
+        headerAlign: "left",
+        align: "left",
+        flex: 2,
+    },
+    {
+        field: "total",
+        headerName: "Total de Artigos",
+        type: "number",
+        headerAlign: "left",
+        align: "left",
+        flex: 1,
+    },
+];
+
+export const worldTableData = [
+    {
+        id: 1,
+        regiao: "América do Norte",
+        total: 3,
+    },
+    {
+        id: 2,
+        regiao: "América do Sul",
+        total: 83,
+    },
+
+];
+
 export const worldChartData = [
     ['Código da Região', 'Continente', 'Total de Artigos'],
     ['021', 'América do Norte', 3],
