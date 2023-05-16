@@ -20,6 +20,26 @@ import TableViewIcon from '@mui/icons-material/TableView';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 
+const headers = [
+    { label: 'ID', key: 'id' },
+    { label: 'Ano', key: 'ano' },
+    // Add headers for evento properties
+    { label: 'CB', key: 'evento.CB' },
+    { label: 'EDUCOMP', key: 'evento.EDUCOMP' },
+    { label: 'LATINOWARE', key: 'evento.LATINOWARE' },
+    { label: 'SBES', key: 'evento.SBES' },
+    { label: 'SBGAMES', key: 'evento.SBGAMES' },
+    { label: 'SBIE', key: 'evento.SBIE' },
+    { label: 'SBSI', key: 'evento.SBSI' },
+    { label: 'SEMIEDU', key: 'evento.SEMIEDU' },
+    { label: 'WEI', key: 'evento.WEI' },
+    { label: 'WIE', key: 'evento.WIE' },
+    { label: 'WIT', key: 'evento.WIT' },
+    { label: 'RBIE', key: 'evento.RBIE' },
+    { label: 'Total', key: 'total' },
+];
+
+
 export default function EventChart2(props) {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -33,11 +53,11 @@ export default function EventChart2(props) {
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <TableViewIcon/><h5> Ver tabela</h5>
                 </IconButton>
-                {/* <CSVLink filename={"eventChart2.csv"} data={totalEvents}>
+                <CSVLink filename={"eventChart2.csv"} headers={headers} data={totalEvents}>
                     <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
-                        <FileDownloadIcon /><h5>CSV</h5>
+                        <FileDownloadIcon /><h5>Exportar</h5>
                     </IconButton>
-                </CSVLink> */}
+                </CSVLink>
             </Box>
             <ResponsiveContainer>
                 <BarChart

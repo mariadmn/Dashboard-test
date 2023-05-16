@@ -16,6 +16,27 @@ import Header from "../header";
 import { Box } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import TableViewIcon from '@mui/icons-material/TableView';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import { CSVLink } from "react-csv";
+
+  const headers = [
+    { label: 'ID', key: 'id' },
+    { label: 'Ano', key: 'ano' },
+    // Add headers for evento properties
+    { label: 'CB', key: 'evento.CB' },
+    { label: 'EDUCOMP', key: 'evento.EDUCOMP' },
+    { label: 'LATINOWARE', key: 'evento.LATINOWARE' },
+    { label: 'SBES', key: 'evento.SBES' },
+    { label: 'SBGAMES', key: 'evento.SBGAMES' },
+    { label: 'SBIE', key: 'evento.SBIE' },
+    { label: 'SBSI', key: 'evento.SBSI' },
+    { label: 'SEMIEDU', key: 'evento.SEMIEDU' },
+    { label: 'WEI', key: 'evento.WEI' },
+    { label: 'WIE', key: 'evento.WIE' },
+    { label: 'WIT', key: 'evento.WIT' },
+    { label: 'RBIE', key: 'evento.RBIE' },
+    { label: 'Total', key: 'total' },
+  ];
 
 export default function EventChart(props) {
     const theme = useTheme();
@@ -29,11 +50,11 @@ export default function EventChart(props) {
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <TableViewIcon/><h5> Ver tabela</h5>
                 </IconButton>
-                {/* <CSVLink filename={"eventChart.csv"} data={eventChartData}>
+                <CSVLink filename={"eventChart.csv"} data={eventChartData} headers={headers}>
                     <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
                         <FileDownloadIcon /><h5>Exportar</h5>
                     </IconButton>
-                </CSVLink> */}
+                </CSVLink>
             </Box>
             <ResponsiveContainer>
                 <BarChart
