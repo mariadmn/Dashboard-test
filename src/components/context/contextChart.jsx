@@ -41,7 +41,6 @@ export default function ContextChart(props){
             </Box>
             <ResponsiveContainer>
                 <BarChart
-                    width={500}
                     height={500}
                     data={contextData}
                     layout="vertical"

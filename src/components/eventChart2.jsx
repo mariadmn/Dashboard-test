@@ -61,8 +61,7 @@ export default function EventChart2(props) {
             </Box>
             <ResponsiveContainer>
                 <BarChart
-                    width={500}
-                    height={550}
+                    height={500}
                     data={totalEvents}
                     margin={{
                         top: 20,
