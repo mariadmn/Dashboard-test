@@ -41,7 +41,7 @@ export default function YearChart(props) {
       <ResponsiveContainer >
         <AreaChart
           data={yearChartData}
-          width={900}
+          width={500}
           height={500}
           margin={{
             top: 10,

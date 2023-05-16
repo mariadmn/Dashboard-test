@@ -83,7 +83,7 @@ function App() {
           <main className="content">
             {/* Topbar */}
             <Box display="flex" justifyContent="space-between" flexDirection="column" style={{ width: "100%", height: "100%" }} >
-              <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[200]}>
+              <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[200]} style={{width:{ setWidth }}}>
                 <Box display="flex" color={colors.primary[100]}><h1>Bem-Vindo!</h1></Box>
                 <Box display="flex" alignItems="center">
                   <IconButton onClick={toggleIsDark}>
@@ -92,43 +92,36 @@ function App() {
                 </Box>
               </Box>
               
-
               <Box display="flex" flexWrap="wrap">
                 {/* Graficos */}
-              
-              {/* Primeira Linha */}
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}> 
-                {isYearChart ? <YearChart toggleBool={toggleYearChart} /> : <YearTable  toggleBool={toggleYearChart} />} 
-              </Box>
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
-                {isCategoryChart ? <CategoryChart  toggleBool={toggleCategoryChart} /> : <CategoryTable  toggleBool={toggleCategoryChart} />} 
-              </Box>
-
-              {/* Segunda Linha */}
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
-                {isEvent2Chart ? <EventChart2  toggleBool={toggleEvent2Chart} /> : <EventTable2  toggleBool={toggleEvent2Chart} />} 
-              </Box>
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
-                {isEventChart ? <EventChart  toggleBool={toggleEventChart} /> : <EventTable  toggleBool={toggleEventChart} />} 
-              </Box>
-
-
-              {/* Terceira Linha */}
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
-                {isContextChart ? <ContextChart  toggleBool={toggleContextChart} /> : <ContextTable  toggleBool={toggleContextChart} />} 
-              </Box>
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
-                {isTechniqueChart ? <TechniqueChart  toggleBool={toggleTechniqueChart} /> : <TechniqueTable  toggleBool={toggleTechniqueChart} />} 
-              </Box>
-
-
-              {/* Quarta Linha */}
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
-                {isWorldChart ? <WorldChart  toggleBool={toggleWorldChart} /> : <WorldTable  toggleBool={toggleWorldChart} />}
-              </Box>
-              <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
-                {isBrazilChart ? <BrazilChart  toggleBool={toggleBrazilChart} /> : <BrazilTable  toggleBool={toggleBrazilChart} />}
-              </Box>
+                {/* Primeira Linha */}
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}> 
+                  {isYearChart ? <YearChart toggleBool={toggleYearChart} /> : <YearTable  toggleBool={toggleYearChart} />} 
+                </Box>
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
+                  {isCategoryChart ? <CategoryChart  toggleBool={toggleCategoryChart} /> : <CategoryTable  toggleBool={toggleCategoryChart} />} 
+                </Box>
+                {/* Segunda Linha */}
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
+                  {isEvent2Chart ? <EventChart2  toggleBool={toggleEvent2Chart} /> : <EventTable2  toggleBool={toggleEvent2Chart} />} 
+                </Box>
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
+                  {isEventChart ? <EventChart  toggleBool={toggleEventChart} /> : <EventTable  toggleBool={toggleEventChart} />} 
+                </Box>
+                {/* Terceira Linha */}
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
+                  {isContextChart ? <ContextChart  toggleBool={toggleContextChart} /> : <ContextTable  toggleBool={toggleContextChart} />} 
+                </Box>
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
+                  {isTechniqueChart ? <TechniqueChart  toggleBool={toggleTechniqueChart} /> : <TechniqueTable  toggleBool={toggleTechniqueChart} />} 
+                </Box>
+                {/* Quarta Linha */}
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
+                  {isWorldChart ? <WorldChart  toggleBool={toggleWorldChart} /> : <WorldTable  toggleBool={toggleWorldChart} />}
+                </Box>
+                <Box m="5px" border={1} p={1} color={colors.grey[200]} style={{width:{ setWidth }, height: 800 }}>
+                  {isBrazilChart ? <BrazilChart  toggleBool={toggleBrazilChart} /> : <BrazilTable  toggleBool={toggleBrazilChart} />}
+                </Box>
 
               </Box>
 
