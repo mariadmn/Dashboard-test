@@ -19,8 +19,8 @@ export function BrazilChart(props) {
   return (
     <div style={{ width: "100%", height: 500 }}  >
         <Box>
-          <Header title="Artigos por Região do Brasil" 
-          subtitle="Gráfico com a quantidade de artigos divididos pelas regiões do Brasil da onde são originários" />
+          <Header title="Artigos por Estado do Brasil" 
+          subtitle="Gráfico com a quantidade de artigos divididos pelos estados do Brasil da onde são originários" />
           
           <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
               <TableViewIcon/><h5> Ver tabela</h5>
