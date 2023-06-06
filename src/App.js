@@ -94,7 +94,7 @@ function App() {
               
               {/* Graficos */}
               <div className="dashboard">
-                <Box flexWrap="wrap" display="grid" gridTemplateColumns="repeat(auto-fit, minmax(300px, 1fr))" gridGap={16}>
+                <Box display="grid" gridTemplateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={1}>
                   {/* Primeira Linha */}
                   <Box m="5px" flexGrow={1}  className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}> 
                     {isYearChart ? <YearChart toggleBool={toggleYearChart} /> : <YearTable  toggleBool={toggleYearChart} />} 
