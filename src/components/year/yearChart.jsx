@@ -24,7 +24,7 @@ export default function YearChart(props) {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <div style={{ width: "100%", height: 500 }}>
+    <div style={{ width: "100%", height: 500 }} >
       <Box >
       <Header title="Ano de Publicação" 
         subtitle="Gráfico com os anos de publicação dos artigos e quantos desse artigos estavam na temática pesquisada" />

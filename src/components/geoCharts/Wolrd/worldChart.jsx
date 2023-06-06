@@ -28,7 +28,7 @@ export function WorldChart(props) {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
   return (
-    <div style={{ width: "100%", height: 500 }}>
+    <div style={{ width: "100%", height: 500 }}  >
         <Box>
             <Header title="Artigos por Região" 
             subtitle="Gráfico com a quantidade de artigos divididos pelas regiões do mundo de onde são originários" />

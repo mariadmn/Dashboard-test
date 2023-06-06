@@ -25,7 +25,7 @@ export default function ContextChart(props){
     const colors = tokens(theme.palette.mode);
 
     return(
-        <div style={{ width: "100%", height: 500 }}>
+        <div style={{ width: "100%", height: 500 }}  >
             <Box>
                 <Header title="Técnicas do artigo" 
                      subtitle="Gráfico das técnicas dos artigos" />
