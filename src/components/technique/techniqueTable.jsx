@@ -53,11 +53,13 @@ export default function TechniqueTable(props) {
                         color: `${colors.grey[100]} !important`,
                     },
                     }}>
-                    <DataGrid 
-                        rows={techniqueData}
-                        columns={techniqueColumns}
-                        components={{ Toolbar: GridToolbar }}
-                    />
+                    <Box width="100%" maxWidth="100%">
+                        <DataGrid 
+                            rows={techniqueData}
+                            columns={techniqueColumns}
+                            components={{ Toolbar: GridToolbar }}
+                        />
+                    </Box>
                 </Box>
             </Box>
         </ResponsiveContainer>

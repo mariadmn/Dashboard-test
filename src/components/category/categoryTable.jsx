@@ -20,7 +20,7 @@ export default function CategoryTable(props) {
         <Header title="Categoria de Publicação" 
         subtitle="Tabela com a quantidade de artigos por categoria" />
         <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}><PieChartIcon/><h5> Ver gráfico</h5></IconButton>
-        <Box display="flex" height="400px" width="100%"
+        <Box display="flex" height="400px" width="100%" overflowX="auto"
           sx={{
             "& .MuiDataGrid-root": {
               border: "none",
@@ -49,11 +49,13 @@ export default function CategoryTable(props) {
               color: `${colors.grey[100]} !important`,
             },
           }}>
-          <DataGrid 
-          rows={categoryChartData}
-          columns={categoryColumns}
-          components={{ Toolbar: GridToolbar }}
-          />
+          <Box width="100%" maxWidth="100%">
+            <DataGrid 
+            rows={categoryChartData}
+            columns={categoryColumns}
+            components={{ Toolbar: GridToolbar }}
+            />
+          </Box>
         </Box>
       </Box>
     </ResponsiveContainer>

@@ -17,8 +17,8 @@ export function BrazilTable(props) {
     return (
         <ResponsiveContainer>
             <Box>
-                <Header title="Artigos por Região do Brasil" 
-                subtitle="Tabela com a quantidade de artigos divididos pelas regiões do Brasil da onde são originários" />
+                <Header title="Artigos por Estado do Brasil" 
+                subtitle="Tabela com a quantidade de artigos divididos pelos estados do Brasil da onde são originários" />
                 
                 <IconButton  onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <BarChartIcon/><h5> Ver gráfico</h5>
@@ -53,11 +53,13 @@ export function BrazilTable(props) {
                         color: `${colors.grey[100]} !important`,
                     },
                     }}>
-                    <DataGrid 
-                        rows={brazilTableData}
-                        columns={brazilTableColumns}
-                        components={{ Toolbar: GridToolbar }}
-                    />
+                    <Box width="100%" maxWidth="100%">
+                        <DataGrid 
+                            rows={brazilTableData}
+                            columns={brazilTableColumns}
+                            components={{ Toolbar: GridToolbar }}
+                        />
+                    </Box>
                 </Box>
             </Box>
         </ResponsiveContainer>

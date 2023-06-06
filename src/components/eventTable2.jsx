@@ -17,14 +17,14 @@ export default function EventTable2(props) {
     return (
         <ResponsiveContainer>
             <Box>
-                <Header title="Técnica do Artigo" 
-                subtitle="Tabela com a quantidade de artigos divididos pelos seus contextos" />
+            <Header title="Eventos realizados por Ano" 
+                subtitle="Gráfico dos eventos realizados entre 2010 e 2022" />
                 
                 <IconButton  onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <BarChartIcon/><h5> Ver gráfico</h5>
                 </IconButton>
                 
-                <Box display="flex" height="500px" width="100%"
+                <Box display="flex" height="500px" width="100%" 
                     sx={{
                     "& .MuiDataGrid-root": {
                         border: "none",
@@ -37,7 +37,7 @@ export default function EventTable2(props) {
                     },
                     "& .MuiDataGrid-columnHeaders": {
                         backgroundColor: colors.blueAccent[700],
-                        borderBottom: "none",
+                        borderBottom: "none", 
                     },
                     "& .MuiDataGrid-virtualScroller": {
                         backgroundColor: colors.primary[400],
@@ -53,11 +53,13 @@ export default function EventTable2(props) {
                         color: `${colors.grey[100]} !important`,
                     },
                     }}>
-                    <DataGrid 
-                        rows={totalEvents}
-                        columns={eventsColumns}
-                        components={{ Toolbar: GridToolbar }}
-                    />
+                    <Box width="100%" maxWidth="100%">
+                        <DataGrid 
+                            rows={totalEvents}
+                            columns={eventsColumns}
+                            components={{ Toolbar: GridToolbar }}
+                        />
+                    </Box>
                 </Box>
             </Box>
         </ResponsiveContainer>

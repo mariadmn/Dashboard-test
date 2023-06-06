@@ -17,13 +17,13 @@ export default function EventTable(props) {
     return (
         <ResponsiveContainer>
             <Box>
-                <Header title="Técnica do Artigo" 
-                subtitle="Tabela com a quantidade de artigos divididos pelos seus contextos" />
+                <Header title="Artigos por Evento" 
+                subtitle="Gráfico dos artigos publicados em cada evento nos anos de 2019, 2020, 2021 e 2022" />
                 
                 <IconButton  onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <BarChartIcon/><h5> Ver gráfico</h5>
                 </IconButton>
-                
+                 
                 <Box display="flex" height="500px" width="100%"
                     sx={{
                     "& .MuiDataGrid-root": {
@@ -53,11 +53,13 @@ export default function EventTable(props) {
                         color: `${colors.grey[100]} !important`,
                     },
                     }}>
-                    <DataGrid 
+                    <Box width="100%" maxWidth="100%">
+                        <DataGrid 
                         rows={eventChartData}
                         columns={eventsColumns}
                         components={{ Toolbar: GridToolbar }}
-                    />
+                        />
+                    </Box>
                 </Box>
             </Box>
         </ResponsiveContainer>

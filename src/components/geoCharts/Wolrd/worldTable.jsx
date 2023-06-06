@@ -53,11 +53,13 @@ export function WorldTable(props) {
                         color: `${colors.grey[100]} !important`,
                     },
                     }}>
-                    <DataGrid 
-                        rows={worldTableData}
-                        columns={worldTableColumns}
-                        components={{ Toolbar: GridToolbar }}
-                    />
+                    <Box width="100%" maxWidth="100%">
+                        <DataGrid 
+                            rows={worldTableData}
+                            columns={worldTableColumns}
+                            components={{ Toolbar: GridToolbar }}
+                        />
+                    </Box>
                 </Box>
             </Box>
         </ResponsiveContainer>

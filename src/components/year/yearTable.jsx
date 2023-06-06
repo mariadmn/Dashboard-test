@@ -52,11 +52,13 @@ export default function YearTable(props) {
               color: `${colors.grey[100]} !important`,
             },
           }}>
-          <DataGrid 
-            rows={yearChartData}
-            columns={columnsYearChart}
-            components={{ Toolbar: GridToolbar }}
-          />
+          <Box width="100%" maxWidth="100%">
+            <DataGrid 
+              rows={yearChartData}
+              columns={columnsYearChart}
+              components={{ Toolbar: GridToolbar }}
+            />
+          </Box>
         </Box>
       </Box>
     </ResponsiveContainer>
