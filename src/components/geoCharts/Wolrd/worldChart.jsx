@@ -30,7 +30,7 @@ export function WorldChart(props) {
   return (
     <div style={{ width: "100%", height: 500 }}  >
         <Box>
-            <Header title="Artigos por Região" 
+            <Header title="Artigos por Região do Mundo" 
             subtitle="Gráfico com a quantidade de artigos divididos pelas regiões do mundo de onde são originários" />
             
             <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>

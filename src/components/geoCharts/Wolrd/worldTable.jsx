@@ -17,8 +17,8 @@ export function WorldTable(props) {
     return (
         <ResponsiveContainer>
             <Box>
-                <Header title="Artigos por Região do Brasil" 
-                subtitle="Tabela com a quantidade de artigos divididos pelas regiões do Brasil da onde são originários" />
+                <Header title="Artigos por Região do Mundo" 
+                subtitle="Tabela com a quantidade de artigos divididos pelas regiões do Mundo da onde são originários" />
                 
                 <IconButton  onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <BarChartIcon/><h5> Ver gráfico</h5>
