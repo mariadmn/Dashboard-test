@@ -6,8 +6,8 @@ import CategoryChart from "./components/category/categoryChart";
 import CategoryTable from "./components/category/categoryTable";
 import EventChart from "./components/event/eventChart";
 import EventTable from "./components/event/eventTable";
-import EventChart2 from "./components/eventChart2";
-import EventTable2 from "./components/eventTable2";
+import EventYearChart from "./components/eventYear/eventYearChart";
+import EventYearTable from "./components/eventYear/eventYearTable";
 import { useState } from "react";
 import ContextTable from "./components/context/contextTable";
 import ContextChart from "./components/context/contextChart";
@@ -19,8 +19,6 @@ import { WorldChart } from "./components/geoCharts/Wolrd/worldChart";
 import { WorldTable } from "./components/geoCharts/Wolrd/worldTable";
 import { BrazilChart } from "./components/geoCharts/Brazil/brazilChart";
 import { BrazilTable } from "./components/geoCharts/Brazil/brazilTable";
-
-// import { useTheme } from "@mui/material/styles";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -64,17 +62,8 @@ function App() {
   }
 
 
-  
-  // const mode = useTheme();
   const colors = tokens(theme.palette.mode);
-  const isSmallScreen = window.innerWidth < 600;
-  function setWidth(){
-    if(isSmallScreen){
-      return ("50%");
-    }else{
-      return ("100%");
-    }
-  }
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
@@ -83,7 +72,7 @@ function App() {
           <main className="content">
             {/* Topbar */}
             <Box display="flex" justifyContent="space-between" flexDirection="column" style={{ width: "100%", height: "100%" }} >
-              <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[200]} style={{width:{ setWidth }}}>
+              <Box display="flex" justifyContent="space-between" p={1} borderBottom={1} color={colors.grey[200]} style={{width:'100%'}}>
                 <Box display="flex" color={colors.primary[100]}><h1>Bem-Vindo!</h1></Box>
                 <Box display="flex" alignItems="center">
                   <IconButton onClick={toggleIsDark}>
@@ -104,7 +93,7 @@ function App() {
                   </Box>
                   {/* Segunda Linha */}
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800}}>
-                    {isEvent2Chart ? <EventChart2  toggleBool={toggleEvent2Chart} /> : <EventTable2  toggleBool={toggleEvent2Chart} />} 
+                    {isEvent2Chart ? <EventYearChart toggleBool={toggleEvent2Chart} /> : <EventYearTable  toggleBool={toggleEvent2Chart} />} 
                   </Box>
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}>
                     {isEventChart ? <EventChart  toggleBool={toggleEventChart} /> : <EventTable  toggleBool={toggleEventChart} />} 
