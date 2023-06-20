@@ -4,7 +4,7 @@ import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
 import Header from "../header";
 import IconButton from "@mui/material/IconButton";
-import PieChartIcon from '@mui/icons-material/PieChart';
+import BarChartIcon from '@mui/icons-material/BarChart';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import {categoryChartData, categoryColumns} from "../../data/chartData";
 import { ResponsiveContainer } from "recharts";
@@ -19,7 +19,7 @@ export default function CategoryTable(props) {
       <Box>
         <Header title="Categoria de Publicação" 
         subtitle="Tabela com a quantidade de artigos por categoria" />
-        <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}><PieChartIcon/><h5> Ver gráfico</h5></IconButton>
+        <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}><BarChartIcon/><h5> Ver gráfico</h5></IconButton>
         <Box display="flex" height="400px" width="100%" overflowX="auto"
           sx={{
             "& .MuiDataGrid-root": {
