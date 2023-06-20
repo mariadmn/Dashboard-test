@@ -9,10 +9,10 @@ import {
   Legend,
   ResponsiveContainer
 } from "recharts";
-import { totalEvents } from "../data/chartData";
+import { totalEvents } from "../../data/chartData";
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../themes";
-import Header from "./header";
+import { tokens } from "../../themes";
+import Header from "../header";
 import { Box } from "@mui/material";
 import { CSVLink } from "react-csv";
 import IconButton from "@mui/material/IconButton";

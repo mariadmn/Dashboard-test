@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { totalEvents, eventsColumns } from "../data/chartData";
+import { totalEvents, eventsColumns } from "../../data/chartData";
 import { Box } from "@mui/material";
-import Header from "./header";
+import Header from "../header";
 import { ResponsiveContainer } from "recharts";
 import IconButton from "@mui/material/IconButton";
 import BarChartIcon from '@mui/icons-material/BarChart';
 import { useTheme } from "@mui/material/styles";
-import { tokens } from "../themes";
+import { tokens } from "../../themes";
 
 
 export default function EventTable2(props) {
