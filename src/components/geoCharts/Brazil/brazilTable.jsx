@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Header from "../../header";
-import { brazilTableColumns, brazilTableData } from "../../../data/chartData";
+import { brazilTableColumns, brazilTableData } from "../../../data";
 import BarChartIcon from '@mui/icons-material/BarChart';
 import { ResponsiveContainer } from "recharts";
 import IconButton from "@mui/material/IconButton";

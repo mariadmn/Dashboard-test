@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
 import { Box } from "@mui/material";
 import Header from "../header";
-import { techniqueData } from "../../data/chartData";
+import { techniqueData } from "../../data";
 import IconButton from "@mui/material/IconButton";
 import TableViewIcon from '@mui/icons-material/TableView';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';

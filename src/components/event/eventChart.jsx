@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer
 } from "recharts";
-import { eventChartData } from "../../data/chartData";
+import { eventChartData } from "../../data";
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
 import Header from "../header";

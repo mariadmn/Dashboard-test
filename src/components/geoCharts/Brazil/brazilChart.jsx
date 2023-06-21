@@ -9,7 +9,7 @@ import { IconButton } from "@mui/material";
 import TableViewIcon from '@mui/icons-material/TableView';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import Header from "../../header";
-import { brazilChartData } from "../../../data/chartData";
+import { brazilChartData } from "../../../data";
 
 
 

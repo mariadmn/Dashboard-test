@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { totalEvents, eventsColumns } from "../../data/chartData";
+import { totalEvents, eventsColumns } from "../../data";
 import { Box } from "@mui/material";
 import Header from "../header";
 import { ResponsiveContainer } from "recharts";

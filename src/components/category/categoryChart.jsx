@@ -3,7 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
 import { Box } from "@mui/material";
 import Header from "../header";
-import { categoryChartData } from "../../data/chartData";
+import { categoryChartData } from "../../data";
 import IconButton from "@mui/material/IconButton";
 import TableViewIcon from '@mui/icons-material/TableView';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
@@ -27,7 +27,7 @@ export default function ContextChart(props){
     return(
         <div style={{ width: "100%", height: 500 }}>
             <Box>
-                <Header title="Categoria do Artigo" 
+                <Header title="Categoria do Publicação" 
                 subtitle="Gráfico com a quantidade de artigos divididos pelas suas categorias" />
                 
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>

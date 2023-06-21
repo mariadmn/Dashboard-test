@@ -6,7 +6,7 @@ import Header from "../header";
 import IconButton from "@mui/material/IconButton";
 import BarChartIcon from '@mui/icons-material/BarChart';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import {categoryChartData, categoryColumns} from "../../data/chartData";
+import {categoryChartData, categoryColumns} from "../../data";
 import { ResponsiveContainer } from "recharts";
 
 

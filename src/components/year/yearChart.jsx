@@ -9,7 +9,7 @@ import {
   Area,
   ResponsiveContainer,
 } from "recharts";
-import { yearChartData } from "../../data/chartData";
+import { yearChartData } from "../../data";
 import { Box } from "@mui/material";
 import Header from "../header";
 import { tokens } from "../../themes";

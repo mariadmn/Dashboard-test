@@ -1,5 +1,5 @@
 import * as React from "react";
-import { yearChartData, columnsYearChart } from "../../data/chartData";
+import { yearChartData, columnsYearChart } from "../../data";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box } from '@mui/material';
 import { useTheme } from "@mui/material/styles";
