@@ -18,9 +18,9 @@ export default function CategoryTable(props) {
     <ResponsiveContainer>
       <Box>
         <Header title="Categoria de Publicação" 
-        subtitle="Tabela com a quantidade de artigos por categoria" />
+        subtitle="Tabela com a quantidade de artigos por categoria e sua porcentagem" />
         <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}><BarChartIcon/><h5> Ver gráfico</h5></IconButton>
-        <Box display="flex" height="400px" width="100%" overflowX="auto"
+        <Box display="flex" height="500px" width="100%" 
           sx={{
             "& .MuiDataGrid-root": {
               border: "none",
