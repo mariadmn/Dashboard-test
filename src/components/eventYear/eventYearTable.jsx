@@ -17,8 +17,8 @@ export default function EventTable2(props) {
     return (
         <ResponsiveContainer>
             <Box>
-            <Header title="Eventos realizados por Ano" 
-                subtitle="Tabela dos eventos realizados entre 2010 e 2022" />
+            <Header title="Artigos por evento" 
+                subtitle="Tabela com o total de artigos publicados por evento entre 2010 e 2022" />
                 
                 <IconButton  onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <BarChartIcon/><h5> Ver gráfico</h5>

@@ -45,8 +45,8 @@ export default function EventChart(props) {
     return (
         <div style={{ width: "100%", height: 500 }} >
             <Box >
-                <Header title="Artigos por Evento" 
-                subtitle="Gráfico dos artigos publicados em cada evento nos anos de 2019, 2020, 2021 e 2022" />
+                <Header title="Artigos na Temática por Evento" 
+                subtitle="Gráfico do total de artigos dentro da temática publicados por evento" />
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <TableViewIcon/><h5> Ver tabela</h5>
                 </IconButton>
