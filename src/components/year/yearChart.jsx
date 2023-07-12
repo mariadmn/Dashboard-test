@@ -32,7 +32,7 @@ export default function YearChart(props) {
         <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
           <TableViewIcon/><h5> Ver tabela</h5>
         </IconButton>
-        <CSVLink filename={"yearChart.csv"} data={yearChartData}>
+        <CSVLink filename={"Ano de Publicação.csv"} data={yearChartData}>
           <IconButton sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
             <FileDownloadIcon /><h5>Exportar</h5>
           </IconButton>

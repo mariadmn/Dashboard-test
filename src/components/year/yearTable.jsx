@@ -1,6 +1,5 @@
 import * as React from "react";
 import { yearChartData, columnsYearChart } from "../../data";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box } from '@mui/material';
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
@@ -8,6 +7,20 @@ import Header from "../header";
 import IconButton from "@mui/material/IconButton";
 import { ResponsiveContainer } from "recharts";
 import BarChartIcon from '@mui/icons-material/BarChart';
+import { DataGrid, GridToolbarContainer, GridCsvExportMenuItem, GridToolbarExportContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarDensitySelector } from "@mui/x-data-grid";
+
+function CustomToolbar() {
+    return (
+      <GridToolbarContainer>
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+        <GridToolbarDensitySelector />
+        <GridToolbarExportContainer>
+          <GridCsvExportMenuItem options={{fileName: 'Ano de Publicação'}} />
+        </GridToolbarExportContainer>
+      </GridToolbarContainer>
+    );
+}
 
 export default function YearTable(props) {
   const theme = useTheme();
@@ -56,7 +69,7 @@ export default function YearTable(props) {
             <DataGrid 
               rows={yearChartData}
               columns={columnsYearChart}
-              components={{ Toolbar: GridToolbar }}
+              components={{ Toolbar: CustomToolbar }}
             />
           </Box>
         </Box>

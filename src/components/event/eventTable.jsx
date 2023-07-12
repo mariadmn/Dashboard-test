@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { eventChartData, eventsColumns } from "../../data";
 import { Box } from "@mui/material";
 import Header from "../header";
@@ -8,7 +7,20 @@ import IconButton from "@mui/material/IconButton";
 import BarChartIcon from '@mui/icons-material/BarChart';
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
+import { DataGrid, GridToolbarContainer, GridCsvExportMenuItem, GridToolbarExportContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarDensitySelector } from "@mui/x-data-grid";
 
+function CustomToolbar() {
+    return (
+      <GridToolbarContainer>
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+        <GridToolbarDensitySelector />
+        <GridToolbarExportContainer>
+          <GridCsvExportMenuItem options={{fileName: 'Artigos na Temática por Evento'}} />
+        </GridToolbarExportContainer>
+      </GridToolbarContainer>
+    );
+}
 
 export default function EventTable(props) {
     const theme = useTheme();
@@ -57,7 +69,7 @@ export default function EventTable(props) {
                         <DataGrid 
                         rows={eventChartData}
                         columns={eventsColumns}
-                        components={{ Toolbar: GridToolbar }}
+                        components={{ Toolbar: CustomToolbar }}
                         />
                     </Box>
                 </Box>

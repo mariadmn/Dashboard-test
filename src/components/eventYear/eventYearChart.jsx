@@ -47,13 +47,13 @@ export default function EventChart2(props) {
     return (
         <div style={{ width: "100%", height: 500 }}  >
             <Box>
-                <Header title="Artigos por evento" 
+                <Header title="Artigos por Evento" 
                 subtitle="Tabela com o total de artigos publicados por evento entre 2010 e 2022" />
 
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <TableViewIcon/><h5> Ver tabela</h5>
                 </IconButton>
-                <CSVLink filename={"eventChart2.csv"} headers={headers} data={totalEvents}>
+                <CSVLink filename={"Artigos por Evento.csv"} headers={headers} data={totalEvents}>
                     <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
                         <FileDownloadIcon /><h5>Exportar</h5>
                     </IconButton>

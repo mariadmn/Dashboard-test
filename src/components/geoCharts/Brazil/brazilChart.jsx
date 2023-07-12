@@ -25,7 +25,7 @@ export function BrazilChart(props) {
           <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
               <TableViewIcon/><h5> Ver tabela</h5>
           </IconButton>
-          <CSVLink filename={"brazilChart.csv"} data={brazilChartData}>
+          <CSVLink filename={"Artigos por Estado do Brasil.csv"} data={brazilChartData}>
               <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
                   <FileDownloadIcon /><h5>Exportar</h5>
               </IconButton>

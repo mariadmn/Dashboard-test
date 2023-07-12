@@ -33,7 +33,7 @@ export default function ContextChart(props){
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <TableViewIcon/><h5> Ver tabela</h5>
                 </IconButton>
-                <CSVLink filename={"contextChart.csv"} data={contextData}>
+                <CSVLink filename={"Contexto do Artigo.csv"} data={contextData}>
                     <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
                         <FileDownloadIcon /><h5>Exportar</h5>
                     </IconButton>

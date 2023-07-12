@@ -7,8 +7,20 @@ import { ResponsiveContainer } from "recharts";
 import IconButton from "@mui/material/IconButton";
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../themes";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid, GridToolbarContainer, GridCsvExportMenuItem, GridToolbarExportContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarDensitySelector } from "@mui/x-data-grid";
 
+function CustomToolbar() {
+    return (
+      <GridToolbarContainer>
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+        <GridToolbarDensitySelector />
+        <GridToolbarExportContainer>
+          <GridCsvExportMenuItem options={{fileName: 'Técnicas do Artigo'}} />
+        </GridToolbarExportContainer>
+      </GridToolbarContainer>
+    );
+}
 
 export default function TechniqueTable(props) {
     const theme = useTheme();
@@ -17,7 +29,7 @@ export default function TechniqueTable(props) {
     return (
         <ResponsiveContainer>
             <Box>
-                <Header title="Técnica do Artigo" 
+                <Header title="Técnicas do Artigo" 
                 subtitle="Tabela com a quantidade de artigos divididos pelos seus contextos" />
                 
                 <IconButton  onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
@@ -57,7 +69,7 @@ export default function TechniqueTable(props) {
                         <DataGrid 
                             rows={techniqueData}
                             columns={techniqueColumns}
-                            components={{ Toolbar: GridToolbar }}
+                            components={{ Toolbar: CustomToolbar}}
                         />
                     </Box>
                 </Box>

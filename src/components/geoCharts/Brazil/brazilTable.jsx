@@ -7,8 +7,20 @@ import { ResponsiveContainer } from "recharts";
 import IconButton from "@mui/material/IconButton";
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "../../../themes";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { DataGrid, GridToolbarContainer, GridCsvExportMenuItem, GridToolbarExportContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarDensitySelector } from "@mui/x-data-grid";
 
+function CustomToolbar() {
+    return (
+      <GridToolbarContainer>
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+        <GridToolbarDensitySelector />
+        <GridToolbarExportContainer>
+          <GridCsvExportMenuItem options={{fileName: 'Artigos por Estado do Brasil'}} />
+        </GridToolbarExportContainer>
+      </GridToolbarContainer>
+    );
+}
 
 export function BrazilTable(props) {
     const theme = useTheme();
@@ -57,7 +69,7 @@ export function BrazilTable(props) {
                         <DataGrid 
                             rows={brazilTableData}
                             columns={brazilTableColumns}
-                            components={{ Toolbar: GridToolbar }}
+                            components={{ Toolbar: CustomToolbar}}
                         />
                     </Box>
                 </Box>

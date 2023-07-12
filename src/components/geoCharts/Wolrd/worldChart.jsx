@@ -36,7 +36,7 @@ export function WorldChart(props) {
             <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                 <TableViewIcon/><h5> Ver tabela</h5>
             </IconButton>
-            <CSVLink filename={"worldChart.csv"} data={worldChartData}>
+            <CSVLink filename={"Artigos por Região do Mundo.csv"} data={worldChartData}>
                 <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
                     <FileDownloadIcon /><h5>Exportar</h5>
                 </IconButton>

@@ -27,13 +27,13 @@ export default function ContextChart(props){
     return(
         <div style={{ width: "100%", height: 500 }}  >
             <Box>
-                <Header title="Técnicas do artigo" 
+                <Header title="Técnicas do Artigo" 
                      subtitle="Gráfico das técnicas dos artigos" />
                 
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>
                     <TableViewIcon/><h5> Ver tabela</h5>
                 </IconButton>
-                <CSVLink filename={"techniqueChart.csv"} data={techniqueData}>
+                <CSVLink filename={"Técnicas do Artigo.csv"} data={techniqueData}>
                     <IconButton sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}} >
                         <FileDownloadIcon /><h5>Exportar</h5>
                     </IconButton>

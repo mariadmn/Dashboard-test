@@ -5,10 +5,22 @@ import { tokens } from "../../themes";
 import Header from "../header";
 import IconButton from "@mui/material/IconButton";
 import BarChartIcon from '@mui/icons-material/BarChart';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import {categoryChartData, categoryColumns} from "../../data";
 import { ResponsiveContainer } from "recharts";
+import { DataGrid, GridToolbarContainer, GridCsvExportMenuItem, GridToolbarExportContainer, GridToolbarColumnsButton, GridToolbarFilterButton, GridToolbarDensitySelector } from "@mui/x-data-grid";
 
+function CustomToolbar() {
+    return (
+      <GridToolbarContainer>
+        <GridToolbarColumnsButton />
+        <GridToolbarFilterButton />
+        <GridToolbarDensitySelector />
+        <GridToolbarExportContainer>
+          <GridCsvExportMenuItem options={{fileName: 'Categoria de Publicação'}} />
+        </GridToolbarExportContainer>
+      </GridToolbarContainer>
+    );
+}
 
 export default function CategoryTable(props) {
   const theme = useTheme();
@@ -19,6 +31,7 @@ export default function CategoryTable(props) {
       <Box>
         <Header title="Categoria de Publicação" 
         subtitle="Tabela com a quantidade de artigos por categoria e sua porcentagem" />
+
         <IconButton onClick={props.toggleBool} sx={ {color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}><BarChartIcon/><h5> Ver gráfico</h5></IconButton>
         <Box display="flex" height="500px" width="100%" 
           sx={{
@@ -53,7 +66,7 @@ export default function CategoryTable(props) {
             <DataGrid 
             rows={categoryChartData}
             columns={categoryColumns}
-            components={{ Toolbar: GridToolbar }}
+            components={{ Toolbar: CustomToolbar }}
             />
           </Box>
         </Box>
