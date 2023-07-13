@@ -1,4 +1,3 @@
-# ![](https://github.com/mariadmn/mariadmn.github.io/blob/master/images/plataforma.png)
 # Plataforma de Visualização de Dados
 <table>
 <tr>
