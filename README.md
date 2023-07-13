@@ -26,7 +26,7 @@ Currently it is working on all NSE (India) Stocks, BSE (India) Stocks Symbol wil
 
 - [React](https://react.dev/) - Biblioteca para web e interfaces de usuário nativas
 - [Google Chart API](https://developers.google.com/chart/interactive/docs/quick_start) - Galeria gratuita e rica, personalizável e compatível com vários navegadores.
-- [Recharts]([http://getbootstrap.com/](https://recharts.org/en-US/api) - Uma biblioteca de gráficos combinável construída em componentes React
+- [Recharts](https://recharts.org/en-US/api) - Uma biblioteca de gráficos combinável construída em componentes React
 
 
 
