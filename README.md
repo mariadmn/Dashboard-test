@@ -16,10 +16,10 @@ Aqui está uma versão demo funcional :  [Plataforma de Visualização de Dados]
 ### Página Inicial
 Currently it is working on all NSE (India) Stocks, BSE (India) Stocks Symbol will be added soon.
 
-![](https://github.com/mariadmn/mariadmn.github.io/blob/master/images/plataforma.png
+![](https://github.com/mariadmn/mariadmn.github.io/blob/master/images/plataforma.png)
 
 ### Modo Claro com Tabelas
-![]](https://github.com/mariadmn/mariadmn.github.io/blob/master/images/plataforma-tabelas.png)
+![](https://github.com/mariadmn/mariadmn.github.io/blob/master/images/plataforma-tabelas.png)
 
 
 
