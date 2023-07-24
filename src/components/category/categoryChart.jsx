@@ -27,7 +27,7 @@ export default function ContextChart(props){
     return(
         <div style={{ width: "100%", height: 500 }}>
             <Box>
-                <Header title="Categoria do Publicação" 
+                <Header title="Categoria de Publicação" 
                 subtitle="Gráfico com a quantidade de artigos divididos pelas suas categorias" />
                 
                 <IconButton onClick={props.toggleBool} sx={ { color: colors.primary[100], "&:hover": { backgroundColor: "transparent" }}}>

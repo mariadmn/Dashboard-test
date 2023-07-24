@@ -84,28 +84,24 @@ function App() {
               {/* Graficos */}
               <div className="dashboard">
                 <Box display="grid" gridTemplateColumns="repeat(auto-fit, minmax(400px, 1fr))" gap={0.5}>
-                  {/* Primeira Linha */}
                   <Box m="5px" flexGrow={1}  className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}> 
                     {isYearChart ? <YearChart toggleBool={toggleYearChart} /> : <YearTable  toggleBool={toggleYearChart} />} 
                   </Box>
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}>
                     {isCategoryChart ? <CategoryChart  toggleBool={toggleCategoryChart} /> : <CategoryTable  toggleBool={toggleCategoryChart} />} 
                   </Box>
-                  {/* Segunda Linha */}
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800}}>
                     {isEvent2Chart ? <EventYearChart toggleBool={toggleEvent2Chart} /> : <EventYearTable  toggleBool={toggleEvent2Chart} />} 
                   </Box>
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}>
                     {isEventChart ? <EventChart  toggleBool={toggleEventChart} /> : <EventTable  toggleBool={toggleEventChart} />} 
                   </Box>
-                  {/* Terceira Linha */}
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}>
                     {isContextChart ? <ContextChart  toggleBool={toggleContextChart} /> : <ContextTable  toggleBool={toggleContextChart} />} 
                   </Box>
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}>
                     {isTechniqueChart ? <TechniqueChart  toggleBool={toggleTechniqueChart} /> : <TechniqueTable  toggleBool={toggleTechniqueChart} />} 
                   </Box>
-                  {/* Quarta Linha */}
                   <Box m="5px" flexGrow={1} className="graph-component" border={1} p={1} color={colors.grey[200]} style={{ height: 800 }}>
                     {isWorldChart ? <WorldChart  toggleBool={toggleWorldChart} /> : <WorldTable  toggleBool={toggleWorldChart} />}
                   </Box>
